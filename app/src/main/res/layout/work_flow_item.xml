@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="workFlowData"
+            type="co.nayan.c3v2.core.models.WorkFlow" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/checkoutContainerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_10"
+        app:cardElevation="@dimen/margin_2"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_15">
+
+            <View
+                android:id="@+id/statusView"
+                android:layout_width="@dimen/margin_3"
+                android:layout_height="0dp"
+                android:background="@{workFlowData.enabled ? @color/green : @color/red}"
+                app:layout_constraintBottom_toBottomOf="@+id/workFlowNameTxt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/workFlowNameTxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/workFlowNameTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_weight="1"
+                android:text="@{workFlowData.name}"
+                android:textColor="@color/text_dark"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/restrictedTxt"
+                app:layout_constraintStart_toEndOf="@+id/statusView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="P2_LP" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/restrictedTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/restricted"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:visibility="@{workFlowData.restricted ? View.VISIBLE : View.GONE, default = gone}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

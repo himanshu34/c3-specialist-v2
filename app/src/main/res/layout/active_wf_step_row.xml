@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkoutContainerCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/margin_10"
+    app:cardElevation="@dimen/margin_2"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/workStepNameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_5"
+            android:textColor="@color/text_dark"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/activeCountTxt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="WorkStep Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/workFlowNameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_2"
+            android:textColor="@color/text_light"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/workStepNameTxt"
+            app:layout_constraintStart_toStartOf="@+id/workStepNameTxt"
+            app:layout_constraintTop_toBottomOf="@+id/workStepNameTxt"
+            tools:text="WorkFlow Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activeCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/active_records" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

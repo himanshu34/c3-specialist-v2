@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="co.nayan.c3specialist_v2.phoneverification.PhoneVerificationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_20"
+        android:paddingBottom="@dimen/margin_20">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/verificationMessageTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            app:fixed="@{@string/phone_verification_message_2}"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:value="@{viewModel.mobileNumber}" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otpLayout"
+            style="@style/TextInputOutlineLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/verificationMessageTxt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otpEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/enter_otp"
+                android:imeOptions="actionSend"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:padding="@dimen/margin_15"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/text_light"
+                android:textSize="@dimen/default_text_label_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_30"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/default_text_label_size"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/otpLayout"
+            app:layout_constraintEnd_toEndOf="@+id/otpLayout"
+            app:layout_constraintTop_toTopOf="@id/otpLayout"
+            tools:ignore="MissingPrefix"
+            tools:text="00:30" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/verifyButton"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:backgroundTint="@color/color_states_button"
+            android:enabled="false"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:onClick="@{()-> viewModel.validateOtp(otpEt.getText().toString())}"
+            android:padding="@dimen/margin_10"
+            android:text="@string/verify_otp"
+            android:textAllCaps="false"
+            android:textColor="@color/color_text_button"
+            android:textSize="@dimen/default_text_size"
+            android:textStyle="normal"
+            app:cornerRadius="@dimen/margin_30"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/otpLayout" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resendOTPButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:enabled="false"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:onClick="@{()->viewModel.resendOtp()}"
+            android:padding="@dimen/margin_10"
+            android:text="@string/resend_again"
+            android:textAllCaps="false"
+            android:textColor="@color/color_states_button"
+            android:textSize="@dimen/default_text_size"
+            android:textStyle="normal"
+            app:cornerRadius="@dimen/margin_30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/verifyButton"
+            app:strokeColor="@color/color_states_button"
+            app:strokeWidth="@dimen/margin_2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

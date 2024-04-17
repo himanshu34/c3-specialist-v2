@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rolesContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/roleTxt"
+    android:padding="@dimen/margin_5"
+    android:clipToPadding="false"
+    android:scrollbars="none">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/rolesSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:selectionRequired="true"
+        app:singleSelection="true"
+        tools:visibility="visible">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/driverChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:checkable="true"
+            android:elevation="4dp"
+            android:text="@string/driver"
+            android:textColor="@color/text_role_selector"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:visibility="gone"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/bg_selector_role_driver"
+            app:textEndPadding="8dp"
+            app:textStartPadding="8dp"
+            tools:visibility="visible" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/surveyorChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:checkable="true"
+            android:elevation="4dp"
+            android:text="@string/driver"
+            android:textColor="@color/text_role_selector"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:visibility="gone"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/bg_selector_role_surveyor"
+            app:textEndPadding="8dp"
+            app:textStartPadding="8dp"
+            tools:visibility="visible" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/specialistChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:checkable="true"
+            android:elevation="4dp"
+            android:text="@string/specialist"
+            android:textColor="@color/text_role_selector"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:visibility="gone"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/bg_selector_role_specialist"
+            app:textEndPadding="8dp"
+            app:textStartPadding="8dp"
+            tools:visibility="visible" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/managerChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:checkable="true"
+            android:elevation="4dp"
+            android:text="@string/manager"
+            android:textColor="@color/text_role_selector"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:visibility="gone"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/bg_selector_role_managers"
+            app:textEndPadding="8dp"
+            app:textStartPadding="8dp"
+            tools:visibility="visible" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/leaderChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:checkable="true"
+            android:elevation="4dp"
+            android:text="@string/leader"
+            android:textColor="@color/text_role_selector"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:visibility="gone"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/bg_selector_role_teamlead"
+            app:textEndPadding="8dp"
+            app:textStartPadding="8dp"
+            tools:visibility="visible" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/adminChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:checkable="true"
+            android:elevation="4dp"
+            android:text="@string/admin"
+            android:textColor="@color/text_role_selector"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:visibility="gone"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/bg_selector_role_admin"
+            app:textEndPadding="8dp"
+            app:textStartPadding="8dp"
+            tools:visibility="visible" />
+
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/delPChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:checkable="true"
+            android:elevation="4dp"
+            android:text="@string/delhi_police"
+            android:textColor="@color/text_role_selector"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:visibility="gone"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/bg_role_selector"
+            app:textEndPadding="8dp"
+            app:textStartPadding="8dp"
+            tools:visibility="visible" />
+
+    </com.google.android.material.chip.ChipGroup>
+</HorizontalScrollView>

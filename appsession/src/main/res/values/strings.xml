@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="session_alert">Session Alert!</string>
+    <string name="session_time_out_click_on_resume_to_restart_session">Session time out, click on RESUME to restart session.</string>
+    <string name="resume">Resume</string>
+</resources>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="wallet.WalletFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dashboard"
+            android:theme="@style/AppTheme">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_15"
+                        android:indeterminate="true"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/checkoutLimitTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+                        tools:text="Checkout Limit: 0.00" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/checkoutLimitTxt">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/margin_5"
+                            android:paddingBottom="@dimen/margin_5">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/driverWallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_3"
+                                app:cardUseCompatPadding="true">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/margin_250"
+                                    android:padding="@dimen/margin_15">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/driverWalletHeadTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/driver_wallet"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="16sp"
+                                        android:visibility="visible"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/driverWalletAmountTxt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/default_money"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="38sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/driverWalletHeadTxt"
+                                        tools:text="₹ 350" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/driverWalletPointsTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_10"
+                                        android:layout_marginEnd="@dimen/margin_30"
+                                        android:text="@string/default_points_earned"
+                                        android:textColor="@color/text_dark"
+                                        app:layout_constraintEnd_toStartOf="@+id/driverWalletCheckoutBtn"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/driverWalletAmountTxt"
+                                        tools:text="234.50 Points Earned" />
+
+                                    <Button
+                                        android:id="@+id/driverWalletCheckoutBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/margin_40"
+                                        android:background="@drawable/bg_checkout"
+                                        android:text="@string/checkout"
+                                        android:textColor="@color/white"
+                                        app:layout_constraintBottom_toBottomOf="@+id/driverWalletPointsTxt"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/driverWalletPointsTxt" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/specialistWallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_3"
+                                app:cardUseCompatPadding="true">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/margin_250"
+                                    android:padding="@dimen/margin_15">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/specialistWalletHeadTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/specialist_wallet"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="16sp"
+                                        android:visibility="visible"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/specialistWalletAmountTxt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="@string/default_money"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="38sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/specialistWalletHeadTxt"
+                                        tools:text="₹ 350" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/specialistWalletPointsTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_10"
+                                        android:layout_marginEnd="@dimen/margin_30"
+                                        android:text="@string/default_points_earned"
+                                        android:textColor="@color/text_dark"
+                                        app:layout_constraintEnd_toStartOf="@+id/specialistWalletCheckoutBtn"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/specialistWalletAmountTxt"
+                                        tools:text="234.50 Points Earned" />
+
+                                    <Button
+                                        android:id="@+id/specialistWalletCheckoutBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/margin_40"
+                                        android:background="@drawable/bg_checkout"
+                                        android:text="@string/checkout"
+                                        android:textColor="@color/white"
+                                        app:layout_constraintBottom_toBottomOf="@+id/specialistWalletPointsTxt"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/specialistWalletPointsTxt" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/managerWallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_3"
+                                app:cardUseCompatPadding="true">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/margin_250"
+                                    android:padding="@dimen/margin_15">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/managerWalletHeadTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/manager_wallet"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="16sp"
+                                        android:visibility="visible"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/managerWalletAmountTxt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/default_money"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="38sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/managerWalletHeadTxt"
+                                        tools:text="₹ 350" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/managerWalletPointsTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_10"
+                                        android:layout_marginEnd="@dimen/margin_30"
+                                        android:text="@string/default_points_earned"
+                                        android:textColor="@color/text_dark"
+                                        app:layout_constraintEnd_toStartOf="@+id/managerWalletCheckoutBtn"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/managerWalletAmountTxt"
+                                        tools:text="234.50 Points Earned" />
+
+                                    <Button
+                                        android:id="@+id/managerWalletCheckoutBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/margin_40"
+                                        android:background="@drawable/bg_checkout"
+                                        android:text="@string/checkout"
+                                        android:textColor="@color/white"
+                                        app:layout_constraintBottom_toBottomOf="@+id/managerWalletPointsTxt"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/managerWalletPointsTxt" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/leaderWallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_3"
+                                app:cardUseCompatPadding="true">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/margin_250"
+                                    android:padding="@dimen/margin_15">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/leaderWalletHeadTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/leader_wallet"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="16sp"
+                                        android:visibility="visible"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/leaderWalletAmountTxt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/default_money"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="38sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/leaderWalletHeadTxt"
+                                        tools:text="₹ 350" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/leaderWalletPointsTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_10"
+                                        android:layout_marginEnd="@dimen/margin_30"
+                                        android:text="@string/default_points_earned"
+                                        android:textColor="@color/text_dark"
+                                        app:layout_constraintEnd_toStartOf="@+id/leaderWalletCheckoutBtn"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/leaderWalletAmountTxt"
+                                        tools:text="234.50 Points Earned" />
+
+                                    <Button
+                                        android:id="@+id/leaderWalletCheckoutBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/margin_40"
+                                        android:background="@drawable/bg_checkout"
+                                        android:text="@string/checkout"
+                                        android:textColor="@color/white"
+                                        app:layout_constraintBottom_toBottomOf="@+id/leaderWalletPointsTxt"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/leaderWalletPointsTxt" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/bonusWallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_3"
+                                app:cardUseCompatPadding="true">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/margin_250"
+                                    android:padding="@dimen/margin_15">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/bonusWalletHeadTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/bonus"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="16sp"
+                                        android:visibility="visible"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/bonusWalletAmountTxt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/default_money"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="38sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/bonusWalletHeadTxt"
+                                        tools:text="₹ 350" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/bonusWalletPointsTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_10"
+                                        android:layout_marginEnd="@dimen/margin_30"
+                                        android:text="@string/default_points_earned"
+                                        android:textColor="@color/text_dark"
+                                        app:layout_constraintEnd_toStartOf="@+id/bonusWalletCheckoutBtn"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/bonusWalletAmountTxt"
+                                        tools:text="234.50 Points Earned" />
+
+                                    <Button
+                                        android:id="@+id/bonusWalletCheckoutBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/margin_40"
+                                        android:background="@drawable/bg_checkout"
+                                        android:text="@string/checkout"
+                                        android:textColor="@color/white"
+                                        app:layout_constraintBottom_toBottomOf="@+id/bonusWalletPointsTxt"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/bonusWalletPointsTxt" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/referralWallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_3"
+                                app:cardUseCompatPadding="true">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/margin_250"
+                                    android:padding="@dimen/margin_15">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/referralWalletHeadTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/referral_wallet"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="16sp"
+                                        android:visibility="visible"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/referralWalletAmountTxt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/default_money"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="38sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/referralWalletHeadTxt"
+                                        tools:text="₹ 350" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/referralWalletPointsTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_10"
+                                        android:layout_marginEnd="@dimen/margin_30"
+                                        android:text="@string/default_points_earned"
+                                        android:textColor="@color/text_dark"
+                                        app:layout_constraintEnd_toStartOf="@+id/referralWalletCheckoutBtn"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/referralWalletAmountTxt"
+                                        tools:text="234.50 Points Earned" />
+
+                                    <Button
+                                        android:id="@+id/referralWalletCheckoutBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/margin_40"
+                                        android:background="@drawable/bg_checkout"
+                                        android:text="@string/checkout"
+                                        android:textColor="@color/white"
+                                        app:layout_constraintBottom_toBottomOf="@+id/referralWalletPointsTxt"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/referralWalletPointsTxt" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/transactionToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dashboard"
+                android:elevation="0dp"
+                app:title="@string/transactions" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <fragment
+            android:id="@+id/transactionFragment"
+            android:name="co.nayan.c3specialist_v2.wallet.transactions.TransactionsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:layout="@layout/fragment_transactions" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dashboard"
+    android:orientation="vertical"
+    tools:context=".screen_sharing.users.UsersActivity">
+
+    <include
+        android:id="@+id/actionBar"
+        layout="@layout/_toolbar" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:duration="800"
+                tools:visibility="invisible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/place_holder_active_users" />
+
+                    <include layout="@layout/place_holder_active_users" />
+
+                    <include layout="@layout/place_holder_active_users" />
+
+                    <include layout="@layout/place_holder_active_users" />
+
+                    <include layout="@layout/place_holder_active_users" />
+
+                    <include layout="@layout/place_holder_active_users" />
+
+                    <include layout="@layout/place_holder_active_users" />
+
+                    <include layout="@layout/place_holder_active_users" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/usersView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:visibility="gone"
+                tools:listitem="@layout/layout_user_item"
+                tools:visibility="visible" />
+
+            <include
+                android:id="@+id/loadingFailedLayout"
+                layout="@layout/_loading_failed" />
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/vAHolderBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucentOverlay">
+
+        <LinearLayout
+            android:id="@+id/vACropContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <co.nayan.c3views.crop.CropPhotoView
+                android:id="@+id/vACropView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                tools:background="#FF0000" />
+
+            <View
+                android:id="@+id/tagsDivider"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_5"
+                android:background="@color/white" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/vACropTagsView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:itemCount="1"
+                tools:listitem="@layout/layout_crop_and_tag" />
+        </LinearLayout>
+
+        <co.nayan.c3views.quadrilateral.QuadrilateralPhotoView
+            android:id="@+id/vAQuadrilateralView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <co.nayan.c3views.polygon.PolygonPhotoView
+            android:id="@+id/vAPolygonView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <co.nayan.c3views.paint.PaintPhotoView
+            android:id="@+id/vAPaintView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <co.nayan.c3views.dragsplit.DragSplitPhotoView
+            android:id="@+id/vADragSplitView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/vAPhotoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/junkMarkerIV"
+            android:layout_width="69sp"
+            android:layout_height="60sp"
+            android:src="@drawable/junk_record"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/previewTimeStamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/translucentOverlay"
+            android:padding="@dimen/margin_10"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/profileIv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bg_circle"
+            tools:tint="@color/green" />
+
+        <TextView
+            android:id="@+id/profileTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/profileIv"
+            app:layout_constraintEnd_toEndOf="@id/profileIv"
+            app:layout_constraintStart_toStartOf="@id/profileIv"
+            app:layout_constraintTop_toTopOf="@id/profileIv"
+            tools:text="TS" />
+
+        <TextView
+            android:id="@+id/nameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/text_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/inviteUserIv"
+            app:layout_constraintStart_toEndOf="@id/profileIv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Spider Man" />
+
+        <TextView
+            android:id="@+id/phoneNumberTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/text_light"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toStartOf="@id/inviteUserIv"
+            app:layout_constraintStart_toEndOf="@id/profileIv"
+            app:layout_constraintTop_toBottomOf="@id/nameTxt"
+            tools:text="9634001273" />
+
+        <TextView
+            android:id="@+id/emailTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/text_light"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/inviteUserIv"
+            app:layout_constraintStart_toEndOf="@id/profileIv"
+            app:layout_constraintTop_toBottomOf="@id/phoneNumberTxt"
+            tools:text="spider@nayantech.com" />
+
+        <ImageView
+            android:id="@+id/inviteUserIv"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/bg_user_connection_request"
+            android:padding="6dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_invite" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

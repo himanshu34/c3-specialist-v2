@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/open_surgeMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/margin_40"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="@dimen/margin_5"
+        app:contentPadding="@dimen/margin_20"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_hover_surge"
+            android:drawablePadding="@dimen/margin_5"
+            android:drawableTint="@color/text_dark"
+            android:gravity="center"
+            android:text="@string/find_your_next_work"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/smallTextSize" />
+    </androidx.cardview.widget.CardView>
+</layout>

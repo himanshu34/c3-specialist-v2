@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#11000000"
+        tools:context="workflowsteps.WorkFlowStepsActivity">
+
+        <include
+            android:id="@+id/actionBar"
+            layout="@layout/_toolbar" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/pullToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerViewContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:duration="800">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/place_holder_wf_steps" />
+
+                        <include layout="@layout/place_holder_wf_steps" />
+
+                        <include layout="@layout/place_holder_wf_steps" />
+
+                        <include layout="@layout/place_holder_wf_steps" />
+
+                        <include layout="@layout/place_holder_wf_steps" />
+
+                        <include layout="@layout/place_holder_wf_steps" />
+
+                        <include layout="@layout/place_holder_wf_steps" />
+
+                        <include layout="@layout/place_holder_wf_steps" />
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/wfStepsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layoutAnimation="@anim/layout_animation_slide_right"
+                    android:visibility="gone"
+                    tools:listitem="@layout/wf_step_item"
+                    tools:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/noWfStepsContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/margin_20"
+                    android:drawablePadding="@dimen/margin_15"
+                    android:text="@string/no_workflow_step_is_present"
+                    android:textColor="@color/text_dark"
+                    android:visibility="gone"
+                    app:drawableTopCompat="@drawable/ic_not_found"
+                    tools:visibility="visible" />
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="isSurveyor"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="home.roles.manager.ManagerHomeFragment">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_15"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/aiProgressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/aiSettingTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_10"
+                android:text="@string/downloading_ai_engine"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_15"
+                android:indeterminate="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aiSettingTv"
+                tools:visibility="visible" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/pullToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aiProgressContainer">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/baseView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/warningBatteryLow"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_10"
+                        android:text="@string/low_battery_warning"
+                        android:textColor="@color/text_dark"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/statsContainerView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@{isSurveyor ? @color/role_surveyor : @color/role_driver}"
+                        app:cardCornerRadius="@dimen/margin_20"
+                        app:cardElevation="@dimen/margin_3"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/warningBatteryLow">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_10">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/todayStatsTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/today_s_stats"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:id="@+id/topStartStatsContainer"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toStartOf="@+id/separator"
+                                app:layout_constraintHorizontal_chainStyle="packed"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/todayStatsTv">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/recordedVideosTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="32sp"
+                                    android:textStyle="bold"
+                                    tools:text="5" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/recorded_videos"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/separator"
+                                android:layout_width="1dp"
+                                android:layout_height="0dp"
+                                android:layout_marginVertical="@dimen/margin_10"
+                                android:background="@color/white"
+                                app:layout_constraintBottom_toBottomOf="@+id/topEndStatsContainer"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/topStartStatsContainer" />
+
+                            <LinearLayout
+                                android:id="@+id/topEndStatsContainer"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/separator"
+                                app:layout_constraintTop_toBottomOf="@+id/todayStatsTv">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/detectedObjectTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/default_money"
+                                    android:textColor="@color/white"
+                                    android:textSize="32sp"
+                                    android:textStyle="bold"
+                                    tools:text="123" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/detected_objects"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <include
+                                android:id="@+id/driverHomeStatsLayout"
+                                layout="@layout/layout_driver_home_stats" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/userEmailTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:maxLines="1"
+                                android:textColor="@color/white"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/driverHomeStatsLayout"
+                                tools:text="user@example.com" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageExpandIcon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/scroll_down"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/userEmailTxt"
+                                app:srcCompat="@drawable/ic_expand_more"
+                                app:tint="@color/white" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/locationLastUpdatedAtTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_15"
+                        android:textColor="@color/text_dark"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/segmentsLastUpdatedAtTxt"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/statsContainerView"
+                        tools:text="Last location sync: about 3 hours" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/segmentsLastUpdatedAtTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_15"
+                        android:textColor="@color/text_dark"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/locationLastUpdatedAtTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/statsContainerView"
+                        tools:text="Last segment sync: about 3 hours" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/homeMessageTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/text_dark"
+                        android:textSize="28sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/segmentsLastUpdatedAtTxt"
+                        tools:text="@string/home_screen_message" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/actionItemsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_5"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/homeMessageTxt">
+
+                        <LinearLayout
+                            android:id="@+id/leftSideContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toStartOf="@+id/rightSideContainer"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/workSummaryContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@color/action_item"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_2"
+                                app:cardUseCompatPadding="true"
+                                app:contentPadding="@dimen/margin_10">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="@dimen/margin_80"
+                                    android:text="@string/work_summary"
+                                    android:textColor="@color/text_dark"
+                                    android:textSize="16sp"
+                                    app:drawableEndCompat="@drawable/ic_stats" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/offlineVideoContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardBackgroundColor="@color/action_item"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_2"
+                                app:cardUseCompatPadding="true"
+                                app:contentPadding="@dimen/margin_10">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="@dimen/margin_80">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/margin_5"
+                                        android:maxLines="1"
+                                        android:text="@string/offline_video"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="16sp"
+                                        app:layout_constraintEnd_toStartOf="@+id/offlineVideoTxt"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/offlineVideoTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/text_dark"
+                                        android:textSize="28sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:text="1921" />
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/offlineVideoTxt">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/aiVideosLayout"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/tapVideosLayout"
+                                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/countAI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/text_dark"
+                                                android:textSize="16sp"
+                                                android:textStyle="bold"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                tools:text="1712" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/ai"
+                                                android:textColor="@color/text_dark"
+                                                android:textSize="12sp"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@+id/countAI" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <View
+                                            android:id="@+id/divider1"
+                                            android:layout_width="1dp"
+                                            android:layout_height="0dp"
+                                            android:layout_margin="@dimen/margin_3"
+                                            android:background="@color/black"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/tapVideosLayout"
+                                            app:layout_constraintStart_toEndOf="@+id/aiVideosLayout"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/tapVideosLayout"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/volVideosLayout"
+                                            app:layout_constraintStart_toEndOf="@+id/aiVideosLayout"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/countTap"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/text_dark"
+                                                android:textSize="16sp"
+                                                android:textStyle="bold"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                tools:text="120" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/tap"
+                                                android:textColor="@color/text_dark"
+                                                android:textSize="12sp"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@+id/countTap" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <View
+                                            android:id="@+id/divider2"
+                                            android:layout_width="1dp"
+                                            android:layout_height="0dp"
+                                            android:layout_margin="@dimen/margin_3"
+                                            android:background="@color/black"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/volVideosLayout"
+                                            app:layout_constraintStart_toEndOf="@+id/tapVideosLayout"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/volVideosLayout"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/ndvVideosLayout"
+                                            app:layout_constraintStart_toEndOf="@+id/tapVideosLayout"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/countVol"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/text_dark"
+                                                android:textSize="16sp"
+                                                android:textStyle="bold"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                tools:text="89" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/vol"
+                                                android:textColor="@color/text_dark"
+                                                android:textSize="12sp"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@+id/countVol" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <View
+                                            android:id="@+id/divider3"
+                                            android:layout_width="1dp"
+                                            android:layout_height="0dp"
+                                            android:layout_margin="@dimen/margin_3"
+                                            android:background="@color/black"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/ndvVideosLayout"
+                                            app:layout_constraintStart_toEndOf="@+id/volVideosLayout"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/ndvVideosLayout"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/volVideosLayout"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/countNDV"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/text_dark"
+                                                android:textSize="16sp"
+                                                android:textStyle="bold"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                tools:text="1220" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/ndv"
+                                                android:textColor="@color/text_dark"
+                                                android:textSize="12sp"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@+id/countNDV" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/dashcamContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@color/action_item"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_2"
+                                app:cardUseCompatPadding="true"
+                                app:contentPadding="@dimen/margin_10">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="@dimen/margin_80"
+                                    android:text="@string/dashcam"
+                                    android:textColor="@color/text_dark"
+                                    android:textSize="16sp"
+                                    app:drawableEndCompat="@drawable/ic_dashcam_outline" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rightSideContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/leftSideContainer">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/startRecordingContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@{isSurveyor ? @color/role_surveyor : @color/role_driver}"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_2"
+                                app:cardUseCompatPadding="true"
+                                app:contentPadding="@dimen/margin_10">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="@dimen/margin_5"
+                                    android:gravity="center"
+                                    android:minHeight="@dimen/margin_80"
+                                    android:text="@string/start_recording"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    app:drawableTopCompat="@drawable/ic_videocam" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/videoGalleryContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@color/action_item"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_2"
+                                app:cardUseCompatPadding="true"
+                                app:contentPadding="@dimen/margin_10">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="@dimen/margin_80"
+                                    android:text="@string/video_gallery"
+                                    android:textColor="@color/text_dark"
+                                    android:textSize="16sp"
+                                    app:drawableEndCompat="@drawable/ic_tutorial" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/droneContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@color/action_item"
+                                app:cardCornerRadius="@dimen/margin_15"
+                                app:cardElevation="@dimen/margin_2"
+                                app:cardUseCompatPadding="true"
+                                app:contentPadding="@dimen/margin_10">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="@dimen/margin_80"
+                                    android:text="@string/drone"
+                                    android:textColor="@color/text_dark"
+                                    android:textSize="16sp"
+                                    app:drawableEndCompat="@drawable/ic_drone" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

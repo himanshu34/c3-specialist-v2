@@ -1,0 +1,225 @@
+{
+  "project_info": {
+    "project_number": "545407232591",
+    "firebase_url": "https://c3specialistv2.firebaseio.com",
+    "project_id": "c3specialistv2",
+    "storage_bucket": "c3specialistv2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545407232591:android:9cdd7df127157a7818983a",
+        "android_client_info": {
+          "package_name": "co.nayan.c3specialist_v2.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545407232591-3adtjfm5d69vdjcs9hi50fiqn1jqeltr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.nayan.c3specialist_v2.dev",
+            "certificate_hash": "a6d660896d8c49cd8570a4c068c149a7d4553a5c"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOU08a1uQ70s3Z3eGjTMX8tM6yfmh93_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545407232591-4fo2eeveel3iibhfk8bvn79g89pmqfnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545407232591:android:2afbbf6f0b669ea018983a",
+        "android_client_info": {
+          "package_name": "co.nayan.c3specialist_v2.dev.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545407232591-gkmncpgh8len4fvu6msljk35q29gai0s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.nayan.c3specialist_v2.dev.debug",
+            "certificate_hash": "36501b698769c9c163f1fa02258d2fc81dc12df7"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOU08a1uQ70s3Z3eGjTMX8tM6yfmh93_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545407232591-4fo2eeveel3iibhfk8bvn79g89pmqfnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545407232591:android:3d8c35f5bbada39618983a",
+        "android_client_info": {
+          "package_name": "co.nayan.c3specialist_v2.production"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545407232591-79b33qpe478fuuu95dh3ugnid23jqal5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.nayan.c3specialist_v2.production",
+            "certificate_hash": "a6d660896d8c49cd8570a4c068c149a7d4553a5c"
+          }
+        },
+        {
+          "client_id": "545407232591-cn9gr1rr9e9bpad3297tmrtmvu5u1kbf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.nayan.c3specialist_v2.production",
+            "certificate_hash": "845008186009c6b4b395f1daad0347f1fb123216"
+          }
+        },
+        {
+          "client_id": "545407232591-vosnt4uq0ckm2jtu145pn08c7fffoe5n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.nayan.c3specialist_v2.production",
+            "certificate_hash": "7e09720b0be835c393a0a3dcc7a7932d68dde24a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOU08a1uQ70s3Z3eGjTMX8tM6yfmh93_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545407232591-4fo2eeveel3iibhfk8bvn79g89pmqfnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545407232591:android:744530b6a044e7c718983a",
+        "android_client_info": {
+          "package_name": "co.nayan.c3specialist_v2.production.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545407232591-l1j38ojencjnu0ujsaprj4o1cqrte3la.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.nayan.c3specialist_v2.production.debug",
+            "certificate_hash": "36501b698769c9c163f1fa02258d2fc81dc12df7"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOU08a1uQ70s3Z3eGjTMX8tM6yfmh93_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545407232591-4fo2eeveel3iibhfk8bvn79g89pmqfnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545407232591:android:323a548c8f74db1718983a",
+        "android_client_info": {
+          "package_name": "co.nayan.c3specialist_v2.qa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545407232591-8imetorfnec7rrrmb0h4d33gutr8oip5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.nayan.c3specialist_v2.qa",
+            "certificate_hash": "a6d660896d8c49cd8570a4c068c149a7d4553a5c"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOU08a1uQ70s3Z3eGjTMX8tM6yfmh93_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545407232591-4fo2eeveel3iibhfk8bvn79g89pmqfnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545407232591:android:7f71cdcf527e9ea318983a",
+        "android_client_info": {
+          "package_name": "co.nayan.c3specialist_v2.qa.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545407232591-li04eecb3fvg4k17cv5vmpaouldgtv16.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.nayan.c3specialist_v2.qa.debug",
+            "certificate_hash": "36501b698769c9c163f1fa02258d2fc81dc12df7"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOU08a1uQ70s3Z3eGjTMX8tM6yfmh93_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545407232591-4fo2eeveel3iibhfk8bvn79g89pmqfnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

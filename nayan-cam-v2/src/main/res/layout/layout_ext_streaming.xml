@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ivService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/launch_service"
+            android:elevation="@dimen/margin_5"
+            android:src="@drawable/ic_launch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextureView
+            android:id="@+id/livestream_preview_ttv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <TextureView
+            android:id="@+id/dummy_ttv"
+            android:layout_width="1px"
+            android:layout_height="1px"
+            android:alpha="0.1"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_main_rv_recognitions"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/zxing_transparent"
+            android:minWidth="250dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/list_item_ai_results" />
+
+
+        <ImageView
+            android:id="@+id/iv_nayan_logo"
+            android:layout_width="101dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/recording_event"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="@dimen/margin_10"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/battery"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:src="@drawable/ic_battery"
+            app:layout_constraintEnd_toStartOf="@id/ivService"
+            app:layout_constraintTop_toTopOf="@id/ivService"
+            app:layout_constraintBottom_toBottomOf="@id/ivService"/>
+
+        <TextView
+            android:id="@+id/batteryTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_bold"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/battery"
+            app:layout_constraintEnd_toEndOf="@id/battery"
+            app:layout_constraintStart_toStartOf="@id/battery"
+            app:layout_constraintTop_toTopOf="@id/battery" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/batteryGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="battery,batteryTv" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/droneLocationCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardBackgroundColor="#000000"
+            app:cardCornerRadius="@dimen/margin_10"
+            app:cardElevation="@dimen/margin_5"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDroneLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin_8"
+                android:textColor="#FADA5E"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="@string/drone_location_warning" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

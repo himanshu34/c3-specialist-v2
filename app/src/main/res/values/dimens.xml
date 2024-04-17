@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="smallestTextSize">12sp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_64">64dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+    <dimen name="margin_120">120dp</dimen>
+    <dimen name="noteTextSize">10sp</dimen>
+
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="medium_text_size">18sp</dimen>
+    <dimen name="large_text_size">22sp</dimen>
+    <dimen name="x_large_text_size">26sp</dimen>
+    <dimen name="xx_large_text_size">30sp</dimen>
+
+    <dimen name="surge_events_size_land">205dp</dimen>
+    <dimen name="surge_events_size_port">265dp</dimen>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_went_wrong">Oops! पुन: प्रयास करें।</string>
+    <string name="no_internet_message">नेटवर्क कनेक्शन अनुपलब्ध। अपने इंटरनेट कनेक्शन की जांच करें और पुनः प्रयास करें।</string>
+    <string name="socket_timeout_connection">हमें खेद है, लेकिन ऐसा लगता है कि सर्वर से कनेक्ट होने में कोई समस्या थी। यह ख़राब इंटरनेट कनेक्शन या सर्वर समस्याओं के कारण हो सकता है।</string>
+    <string name="permission_error">इस ऐप का उपयोग करने के लिए प्लीज लोकेशन परमिशन एक्सेप्ट करे </string>
+    <string name="offline_location_error">आपका उपकरण वर्तमान में ऑफ़लाइन मोड में है, स्थान अनुपलब्ध है।</string>
+    <string name="no_gps_provider">इस डिवाइस के लिए कोई जीपीएस प्रदाता नहीं मिला</string>
+
+    <string name="cancel">कैंसिल</string>
+    <string name="alert">चेतावनी!</string>
+    <string name="ok">ठीक</string>
+</resources>

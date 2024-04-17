@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DF4C41</color>
+    <color name="colorPrimaryDark">#C54036</color>
+    <color name="colorAccent">#EA9A93</color>
+
+    <color name="colorGreyValue">#d5d5d5</color>
+    <color name="colorButtonTint">#0070F0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorGrey_shade1">#6D6D6D</color>
+
+    <color name="colorPrimaryLight">#F15044</color>
+    <color name="text_dark">#333333</color>
+    <color name="text_light">#999999</color>
+    <color name="text_hint">#455a64</color>
+    <color name="text_mid_light">#616161</color>
+    <color name="text_light1">#424242</color>
+    <color name="text_light2">#263238</color>
+    <color name="dark_gray">#191919</color>
+    <color name="role_unselect">#EADCD8</color>
+    <color name="role_disabled">#F4F5F7</color>
+    <color name="role_select">#DF4C41</color>
+
+    <color name="text_stats">#EDCDC3</color>
+    <color name="action_item">#E4E1E1</color>
+    <color name="start_work">#5ACA5F</color>
+    <color name="start_recording_bg">#FF9800</color>
+    <color name="dashboard">#F0F0F0</color>
+
+    <color name="pending">#FCA406</color>
+    <color name="rejected">#D90011</color>
+    <color name="verified">#4CAF50</color>
+    <color name="missing">#C54036</color>
+    <color name="language_selected">#E1B0A1</color>
+
+    <color name="checkout_enabled">#4CAF50</color>
+    <color name="checkout_disabled">#94DA97</color>
+    <color name="placeholder">#dddddd</color>
+    <color name="red">#FF0000</color>
+    <color name="stats_color">#2036B3</color>
+    <color name="review_work">#FCA406</color>
+    <color name="request_player">#FCA406</color>
+
+    <color name="blue">#3F51B5</color>
+    <color name="green">#4CAF50</color>
+    <color name="yellow">#FCA406</color>
+    <color name="reset">#C54036</color>
+
+    <!-- Road Tracking Colors -->
+    <color name="tracking_blue">#0079ff</color>
+    <color name="tracking_red">#df3501</color>
+    <color name="tracking_green">#00af3a</color>
+    <color name="tracking_yellow">#f7a915</color>
+    <color name="tracking_orange">#fd5308</color>
+    <color name="tracking_black">#424242</color>
+
+    <color name="correct">#f1f8e9</color>
+    <color name="incorrect">#ffebee</color>
+    <color name="inconclusive">#e3f2fd</color>
+    <color name="no_consensus">#fffde7</color>
+
+    <color name="does">#E9FFE9</color>
+    <color name="donts">#FFDDDD</color>
+    <color name="junk_light">#D6D3B3</color>
+    <color name="does_header">#AACCAA</color>
+    <color name="donts_header">#CCAAAA</color>
+    <color name="junk_header">#D6D3AD</color>
+
+    <color name="ref_red">#DF4C42</color>
+</resources>

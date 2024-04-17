@@ -1,0 +1,4 @@
+C3_SPECIALIST_BASE_URL = "https://c3-v2-qa.nayan.co/"
+C3_SPECIALIST_WEBRTC_HOST = "ws://c3-v2-qa.nayan.co/cable"
+NAYAN_SEARCH = "https://nayan-v2-dev.nayan.co/"
+BASE_GRAPH_HOPPER_URL = "http://3.108.99.65:8989/"

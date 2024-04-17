@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_20"
+            android:paddingBottom="@dimen/margin_20">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGrantPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?android:attr/actionBarSize"
+                android:drawablePadding="@dimen/margin_20"
+                android:text="@string/grant_access"
+                android:textColor="@color/text_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:drawableTopCompat="@drawable/ic_request_permissions"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_5"
+                android:text="@string/permission_disclosure_text"
+                android:lineSpacingExtra="@dimen/margin_2"
+                android:textColor="@color/text_dark"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvGrantPermission" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvYourLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?android:attr/actionBarSize"
+                android:drawablePadding="@dimen/margin_20"
+                android:maxLines="1"
+                android:text="@string/your_location"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_your_location"
+                app:drawableTint="@color/blue_color"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvNote" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBackgroundLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:drawablePadding="@dimen/margin_20"
+                android:maxLines="1"
+                android:text="@string/background_location"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_background_location"
+                app:drawableTint="@color/blue_color"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvYourLocation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:drawablePadding="@dimen/margin_20"
+                android:maxLines="1"
+                android:text="@string/hover_service"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_hover"
+                app:drawableTint="@color/blue_color"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvBackgroundLocation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhoneCamera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:drawablePadding="@dimen/margin_20"
+                android:maxLines="1"
+                android:text="@string/phone_camera"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_phone_camera"
+                app:drawableTint="@color/blue_color"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvHover" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhoneStorage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:drawablePadding="@dimen/margin_20"
+                android:maxLines="1"
+                android:text="@string/phone_storage"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_phone_storage"
+                app:drawableTint="@color/blue_color"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhoneCamera" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDeny"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?android:attr/actionBarSize"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/deny_access"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/grey_color"
+                app:cornerRadius="@dimen/margin_30"
+                app:elevation="@dimen/margin_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonAllow"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhoneStorage"
+                app:layout_constraintVertical_bias="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAllow"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/allow_access"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/blue_color"
+                app:cornerRadius="@dimen/margin_30"
+                app:elevation="@dimen/margin_5"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonDeny"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/buttonDeny"
+                app:layout_constraintTop_toTopOf="@+id/buttonDeny" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

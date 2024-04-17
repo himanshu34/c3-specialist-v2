@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/action_item" />
+                    <corners android:radius="@dimen/margin_5" />
+                    <padding android:bottom="@dimen/margin_2" android:left="@dimen/margin_2" android:right="@dimen/margin_2" android:top="@dimen/margin_2" />
+                </shape>
+            </item>
+
+            <item android:right="@dimen/margin_5">
+                <bitmap android:gravity="center_vertical|end" android:src="@mipmap/ic_spinner_down" />
+            </item>
+        </layer-list>
+    </item>
+</selector>

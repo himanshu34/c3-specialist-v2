@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="session_alert">सेशन चेतावनी!</string>
+    <string name="session_time_out_click_on_resume_to_restart_session">सत्र का समय समाप्त, सत्र को पुनः आरंभ करने के लिए RESUME पर क्लिक करें।</string>
+    <string name="resume">Resume</string>
+</resources>

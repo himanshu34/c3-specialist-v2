@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="upload_notification" type="id" />
+    <item name="upload_failed_notification" type="id" />
+    <item name="syncing_notification" type="id" />
+    <item name="downloading_notification" type="id" />
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="position" type="id" />
+    <item name="transaction" type="id" />
+    <item name="work_flow" type="id" />
+    <item name="wf_step" type="id" />
+    <item name="record" type="id" />
+    <item name="learning_video" type="id" />
+    <item name="user_info" type="id" />
+    <item name="team_member" type="id" />
+    <item name="member_stats" type="id" />
+    <item name="display_data_item" type="id" />
+</resources>

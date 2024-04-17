@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="polygonGradient">#BEE66332</color>
+    <color name="selectedOverlay">#8032E6D7</color>
+    <color name="edit_overlay_color">#CDDC39</color>
+    <color name="translucentOverlay">#66000000</color>
+    <color name="endPointsOverlay">#304FFE</color>
+    <color name="white">#FFFFFF</color>
+    <color name="selectedEndPointOverlay">#ff0000</color>
+    <color name="aiOuterEndPointOverlay">#ff3232</color>
+    <color name="aiInnerEndPointOverlay">#ff7f7f</color>
+
+    <color name="hint_overlay">#0099FF</color>
+
+    <color name="drag_split_outer_overlay">#6200EE</color>
+    <color name="drag_split_inner_overlay">#BB86FC</color>
+    <color name="selected_segment_overlay">#FFEB3B</color>
+
+    <color name="crop_outer_overlay">#6200EE</color>
+    <color name="crop_inner_overlay">#BB86FC</color>
+    <color name="crop_tagged_outer_overlay">#25AD7C</color>
+    <color name="crop_tagged_inner_overlay">#AEEDD6</color>
+    <color name="selected_crop_overlay">#FFEB3B</color>
+
+    <color name="quad_outer_overlay">#E2ED76</color>
+    <color name="quad_inner_overlay">#B4C131</color>
+
+    <color name="text_black">#000000</color>
+</resources>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="profile.ProfileFragment">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_15"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/pullToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_10"
+                    android:paddingBottom="@dimen/margin_10">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.025" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.975" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/profileTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:text="@string/profile"
+                        android:textColor="@color/text_dark"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/syncVideos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/margin_48"
+                        android:padding="@dimen/margin_5"
+                        android:text="@string/upload"
+                        android:textColor="@drawable/text_color_states"
+                        android:visibility="gone"
+                        app:drawableTint="@drawable/text_color_states"
+                        app:drawableTopCompat="@drawable/ic_sync"
+                        app:layout_constraintBottom_toBottomOf="@+id/profileTxt"
+                        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                        app:layout_constraintTop_toTopOf="@+id/profileTxt"
+                        tools:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/warningBatteryLow"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_12"
+                        android:text="@string/low_battery_warning"
+                        android:textColor="@color/text_mid_light"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/profileTxt"
+                        tools:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/personalInfoContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_12"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/warningBatteryLow">
+
+                        <FrameLayout
+                            android:id="@+id/image_profile_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:indeterminateTint="@color/colorAccent"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profileImageView"
+                                android:layout_width="@dimen/margin_80"
+                                android:layout_height="@dimen/margin_80"
+                                app:civ_border_color="@color/colorAccent"
+                                app:civ_border_width="@dimen/margin_1" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_5"
+                            android:layout_marginEnd="@dimen/margin_5"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/userNameTxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_dark"
+                                android:textSize="20sp"
+                                tools:text="Rajeev Kumar" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/userMobileTxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:text="9876543210" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/userEmailTxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:text="User ID: manager@nayantech.com" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_forward" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/referralContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:padding="@dimen/margin_12"
+                        android:text="@string/referral"
+                        android:textColor="@color/text_dark"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:drawableEndCompat="@drawable/ic_forward"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/personalInfoContainer"
+                        tools:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/kycContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_12"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/referralContainer">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/kyc"
+                            android:textColor="@color/text_dark"
+                            android:textSize="20sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/kycStatusTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_5"
+                            android:layout_marginEnd="@dimen/margin_5"
+                            tools:text="Verified"
+                            tools:textColor="@color/verified" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/kycStatusIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:background="@drawable/ic_verified"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/bankDetailsContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:padding="@dimen/margin_12"
+                        android:text="@string/bank_account_info"
+                        android:textColor="@color/text_dark"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_forward"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/kycContainer" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/resetPasswordContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:padding="@dimen/margin_12"
+                        android:text="@string/reset_password"
+                        android:textColor="@color/text_dark"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_forward"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/bankDetailsContainer" />
+
+                    <LinearLayout
+                        android:id="@+id/languageContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_12"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/resetPasswordContainer">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/my_language"
+                            android:textColor="@color/text_dark"
+                            android:textSize="20sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/languageTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/margin_10"
+                            android:gravity="center_vertical"
+                            app:drawableEndCompat="@drawable/ic_forward"
+                            tools:text="English" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/galleryContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:padding="@dimen/margin_12"
+                        android:text="@string/gallery"
+                        android:textColor="@color/text_dark"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:drawableEndCompat="@drawable/ic_forward"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/languageContainer"
+                        tools:visibility="visible" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tncContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:padding="@dimen/margin_12"
+                        android:text="@string/tnc"
+                        android:textColor="@color/text_dark"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:drawableEndCompat="@drawable/ic_forward"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/galleryContainer"
+                        tools:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/settingsContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:padding="@dimen/margin_12"
+                        android:text="@string/driver_setting"
+                        android:textColor="@color/text_dark"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:drawableEndCompat="@drawable/ic_forward"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/tncContainer"
+                        tools:visibility="visible" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/learningVideoSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:checked="true"
+                        android:padding="@dimen/margin_12"
+                        android:text="@string/learning_videos"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsContainer"
+                        tools:visibility="visible" />
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:background="@color/action_item"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/learningVideoSwitch" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/walletContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/margin_12"
+                        android:text="@string/wallet"
+                        android:textColor="@color/text_dark"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_forward"
+                        app:drawableStartCompat="@drawable/ic_wallet"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:background="@color/action_item"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/walletContainer" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/logoutContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        app:cardBackgroundColor="@color/action_item"
+                        app:cardCornerRadius="@dimen/margin_20"
+                        app:cardElevation="@dimen/margin_3"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/logoutTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_10"
+                            android:text="@string/logout"
+                            android:textColor="@color/text_dark"
+                            android:textSize="16sp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/buildVersionTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_light"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/logoutContainer"
+                        tools:text="V1.0.0.1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="recordData"
+            type="co.nayan.c3v2.core.models.Record" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp"
+        app:contentPadding="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/headerTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/record_info"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/closeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:src="@drawable/ic_close"
+                android:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/headerTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/headerTxt" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headerTxt">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/videoIdLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/video_id"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/videoIdTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center|end"
+                    android:maxLines="1"
+                    android:text="@{recordData.videoId == null ? `NA` : recordData.videoId}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/videoIdLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/videoIdLabel"
+                    app:layout_constraintTop_toTopOf="@+id/videoIdLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/recordedByIdLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@{recordData.videoSourceId == null ? @string/recorded_by : @string/video_source_id}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videoIdLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/recordedByIdTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center|end"
+                    android:maxLines="1"
+                    android:text="@{recordData.videoSourceId == null ? (recordData.driverId == null ? `NA` : recordData.driverId) : recordData.videoSourceId}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/recordedByIdLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/recordedByIdLabel"
+                    app:layout_constraintTop_toTopOf="@+id/recordedByIdLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dateOfRecordingLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/date_of_recording"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recordedByIdLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dateOfRecordingTxt"
+                    setRecordedOnTimeText="@{recordData.videoRecordedOn}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center|end"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dateOfRecordingLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/dateOfRecordingLabel"
+                    app:layout_constraintTop_toTopOf="@+id/dateOfRecordingLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surgeMetaTagLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/surge_meta_tag"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="@{recordData.metatag == null ? View.GONE : View.VISIBLE, default = gone}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dateOfRecordingLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surgeMetaTagTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center|end"
+                    android:maxLines="1"
+                    android:text="@{recordData.metatag}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="@{recordData.metatag == null ? View.GONE : View.VISIBLE, default = gone}"
+                    app:layout_constraintBottom_toBottomOf="@+id/surgeMetaTagLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/surgeMetaTagLabel"
+                    app:layout_constraintTop_toTopOf="@+id/surgeMetaTagLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/annotationPriorityLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/annotation_priority"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/surgeMetaTagLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/annotationPriorityTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center|end"
+                    android:maxLines="1"
+                    android:text="@{recordData.annotationPriority.toString()}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/annotationPriorityLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/annotationPriorityLabel"
+                    app:layout_constraintTop_toTopOf="@+id/annotationPriorityLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/judgementPriorityLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/judgement_priority"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/annotationPriorityLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/judgementPriorityTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center|end"
+                    android:maxLines="1"
+                    android:text="@{recordData.judgmentPriority.toString()}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/judgementPriorityLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/judgementPriorityLabel"
+                    app:layout_constraintTop_toTopOf="@+id/judgementPriorityLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/reviewPriorityLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/review_priority"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/judgementPriorityLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/reviewPriorityTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center|end"
+                    android:maxLines="1"
+                    android:text="@{recordData.reviewPriority.toString()}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/reviewPriorityLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/reviewPriorityLabel"
+                    app:layout_constraintTop_toTopOf="@+id/reviewPriorityLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/cityKmlPriorityLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/city_priority"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reviewPriorityLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/cityKmlPriorityTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center|end"
+                    android:maxLines="1"
+                    android:text="@{recordData.cityKmlPriority.toString()}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cityKmlPriorityLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cityKmlPriorityLabel"
+                    app:layout_constraintTop_toTopOf="@+id/cityKmlPriorityLabel" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

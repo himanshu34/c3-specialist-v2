@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loadingFailedContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/primaryTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="@string/no_data_found"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/x_large_text_size" />
+
+    <TextView
+        android:id="@+id/secondaryTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/rubik_regular"
+        android:gravity="center"
+        android:text="@string/please_refresh_the_page_and_try_again"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/medium_text_size" />
+</LinearLayout>

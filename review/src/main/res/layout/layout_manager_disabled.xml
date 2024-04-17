@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_bold"
+            android:text="@string/attention"
+            android:textAllCaps="true"
+            android:textColor="@color/text_dark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/messageTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/your_account_is_locked_due_to_wrong_submission_of_records"
+            android:textColor="@color/text_dark"
+            android:textSize="18sp"
+            app:drawableTopCompat="@drawable/ic_warning"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/negativeBtn"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/incorrect_records"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:backgroundTint="#D34A4A"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/positiveBtn"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/messageTxt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/positiveBtn"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:backgroundTint="#4CAF50"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/negativeBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/negativeBtn"
+            app:layout_constraintTop_toTopOf="@+id/negativeBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

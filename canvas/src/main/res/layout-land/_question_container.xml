@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/bottomLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="#99000000">
+
+        <RelativeLayout
+            android:id="@+id/topContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/questionContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                tools:visibility="invisible">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/backIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/back"
+                    android:padding="@dimen/margin_5"
+                    app:srcCompat="@drawable/ic_baseline_arrow_back" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/questionTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rubik_bold"
+                    android:gravity="center_horizontal"
+                    android:maxLines="2"
+                    android:padding="@dimen/margin_5"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:text="Crop out all tail lights?Crop out all tail lights?" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/topIconContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/textToSpeechIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_5"
+                            app:srcCompat="@drawable/ic_volume" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/contrastIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_5"
+                            app:srcCompat="@drawable/ic_brightness" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/makeTransparentIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_5"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_hide_text"
+                            tools:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/overlayTransparentIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_5"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_invisible"
+                            app:tint="@color/white"
+                            tools:visibility="visible" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/aiAssistSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_5"
+                        android:background="@drawable/bg_next_line"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="@dimen/margin_10"
+                        android:text="@string/ai_assist_enabled"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/tvUserCategoryMedal"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/topIconContainer"
+                        tools:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUserCategoryMedal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_5"
+                        android:background="@drawable/white_stroke_rounded_corners"
+                        android:minWidth="@dimen/margin_60"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/aiAssistSwitch"
+                        app:layout_constraintTop_toBottomOf="@+id/topIconContainer"
+                        tools:text="New User"
+                        tools:visibility="visible" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/lineThicknessContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@id/overlayJudgmentContainer"
+                android:gravity="center_horizontal|start"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <SeekBar
+                    android:id="@+id/thicknessSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_contrast_slider"
+                    android:elevation="8dp"
+                    android:max="50"
+                    android:paddingStart="60dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="12dp"
+                    android:progress="10"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/thicknessIv"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_label"
+                    android:elevation="8dp"
+                    android:padding="12dp"
+                    app:srcCompat="@drawable/ic_thickness" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/overlayJudgmentContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_judgment_controllers"
+                android:gravity="center"
+                android:minWidth="@dimen/margin_120"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/deleteOverlayIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/reject"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_delete_symbol" />
+
+                <ImageButton
+                    android:id="@+id/approveOverlayIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/approve"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_approve_symbol" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineSelectorContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/overlayJudgmentContainer"
+                android:gravity="center_horizontal|end"
+                android:minWidth="@dimen/margin_120"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/straightLineIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_line_selector"
+                    android:contentDescription="@string/line"
+                    android:padding="@dimen/margin_10"
+                    app:srcCompat="@drawable/ic_line_icon" />
+
+                <ImageButton
+                    android:id="@+id/curvedLineIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_curve_line_selector"
+                    android:contentDescription="@string/line"
+                    android:padding="@dimen/margin_10"
+                    app:srcCompat="@drawable/ic_curve" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inputSelectionContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/overlayJudgmentContainer"
+                android:gravity="center_horizontal|end"
+                android:visibility="invisible"
+                tools:visibility="invisible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/inputTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_label"
+                    android:gravity="center"
+                    android:minWidth="@dimen/margin_80"
+                    android:padding="@dimen/margin_10"
+                    android:text="@string/labeled_text"
+                    android:textColor="@color/label_text_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/classifySelectionContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/overlayJudgmentContainer"
+                android:gravity="center_horizontal|end"
+                android:visibility="invisible"
+                tools:visibility="invisible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/classifyTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_label"
+                    android:gravity="center"
+                    android:minWidth="@dimen/margin_80"
+                    android:padding="@dimen/margin_10"
+                    android:text="@string/classify"
+                    android:textAllCaps="true"
+                    android:textColor="@color/label_text_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/doneSelectionContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/overlayJudgmentContainer"
+                android:gravity="center_horizontal|end"
+                android:visibility="invisible"
+                tools:visibility="invisible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/doneTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_judgment_controllers"
+                    android:gravity="center"
+                    android:minWidth="@dimen/margin_80"
+                    android:padding="@dimen/margin_10"
+                    android:text="@string/done"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nextLineTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_next_line"
+                android:fontFamily="@font/rubik_bold"
+                android:gravity="center"
+                android:minWidth="@dimen/margin_80"
+                android:padding="@dimen/margin_8"
+                android:text="@string/next_line"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topContainer">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/prevRecordContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_back"
+                android:text="@string/prev"
+                android:textColor="@color/prev_color_selector"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                app:drawableTint="@color/prev_color_selector"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="invisible" />
+
+            <ProgressBar
+                android:id="@+id/sandboxProgress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_10"
+                android:progressDrawable="@drawable/progress_drawable"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/recordIdTxt"
+                app:layout_constraintEnd_toStartOf="@+id/recordIdTxt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/recordIdTxt"
+                tools:progress="50"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/recordIdTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_5"
+                android:drawablePadding="@dimen/margin_10"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:drawableTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Record ID: 123" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

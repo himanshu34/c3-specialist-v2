@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="templateData"
+            type="co.nayan.c3v2.core.models.Template" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/templateView"
+        android:layout_width="@dimen/margin_120"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_10"
+        app:cardElevation="@dimen/margin_3"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_template_view"
+            android:minHeight="@dimen/margin_130"
+            android:padding="@dimen/margin_10">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/templateIv"
+                android:layout_width="@dimen/margin_70"
+                android:layout_height="@dimen/margin_70"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/template"
+                android:orientation="vertical"
+                app:error="@{@drawable/ic_reload}"
+                app:imageUrl="@{templateData.templateIcon}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/templateNameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center"
+                android:maxLines="3"
+                android:text="@{templateData.templateName}"
+                android:textColor="@color/template_view_text_selector"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/templateIv"
+                app:layout_constraintVertical_bias="1"
+                tools:text="Car associates private limited" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

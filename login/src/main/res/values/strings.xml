@@ -1,0 +1,37 @@
+<resources>
+    <string name="server_client_id" translatable="false">545407232591-4fo2eeveel3iibhfk8bvn79g89pmqfnm.apps.googleusercontent.com</string>
+    <string name="email">Email address</string>
+    <string name="please_enter_email">Please enter your email</string>
+    <string name="email_or_username">Email or Username</string>
+    <string name="password">Password</string>
+    <string name="please_enter_password">Please enter your password</string>
+    <string name="please_enter_confirm_password">Please enter confirm password</string>
+    <string name="sign_in">Log In</string>
+    <string name="username_or_email_cant_be_blank">Username or email can\'t be blank.</string>
+    <string name="name_cant_be_blank">Name can\'t be blank.</string>
+    <string name="email_cant_be_blank">Email can\'t be blank.</string>
+    <string name="mobile_cant_be_blank">Mobile No. can\'t be blank.</string>
+    <string name="password_match">Password and confirm password should be same.</string>
+    <string name="invalid_email">Email should be valid</string>
+    <string name="password_cant_be_blank">Password can\'t be blank.</string>
+    <string name="could_not_login">Could not login.</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="already_account">Already have account?</string>
+    <string name="create_new_one">Create a new one</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="new_member">New member</string>
+    <string name="name">Name</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="please_enter_name">Please enter your name</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or">OR</string>
+    <string name="forgot_password_message">Enter the email associated with your account and we\’ll send a temporary password to verify your account</string>
+    <string name="send_password">Send password</string>
+    <string name="password_sent">Password Sent</string>
+    <string name="password_sent_message">We have sent a temporary password to your email</string>
+    <string name="done">Done</string>
+    <string name="google_sign_in_error">Error occurred while login with google</string>
+    <string name="invalid_token">Access token can\'t be blank. There is some problem in fetching access token with this account try with another account.</string>
+</resources>

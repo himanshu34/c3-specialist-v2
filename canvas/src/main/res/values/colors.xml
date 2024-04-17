@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F26F47</color>
+    <color name="colorPrimaryDark">#C54036</color>
+    <color name="colorAccent">#EA9A93</color>
+    <color name="white">#FFFFFF</color>
+    <color name="disabled_white">#AAAAAA</color>
+    <color name="black">#000000</color>
+    <color name="background_work_progress">#dddddd</color>
+    <color name="foreground_work_progress">#4CAF50</color>
+    <color name="bg_canvas">#DF4C41</color>
+    <color name="bg_canvas_fragment_container">#F8F8F8</color>
+    <color name="text_dark">#333333</color>
+    <color name="green">#4CAF50</color>
+    <color name="yellow">#fada5e</color>
+    <color name="undo">#E66332</color>
+    <color name="junk">#B5C520</color>
+    <color name="submit">#3F51B5</color>
+    <color name="polygonGradient">#BEE66332</color>
+    <color name="true_button_enabled">#4CAF50</color>
+    <color name="true_button_disabled">#72B575</color>
+    <color name="false_button_enabled">#DD3A2E</color>
+    <color name="false_button_disabled">#F8756B</color>
+    <color name="translucentOverlay">#66000000</color>
+    <color name="translucentWhiteOverlay">#CCFFFFFF</color>
+    <color name="unclassifiedOverlay">#ccE66332</color>
+    <color name="colorKeyboard">#2C3E50</color>
+    <color name="bg_classify">#F8F4F4</color>
+    <color name="first_lip_input">#FFFFFF</color>
+    <color name="first_lip_input_selected">#FFFDD0</color>
+    <color name="light_gray">#BEB4B4</color>
+    <color name="bg_image">#F8EEEE</color>
+    <color name="wallet_selected">#ED815F</color>
+    <color name="coral">#E66332</color>
+
+    <color name="light_red">#ECBCBB</color>
+    <color name="light_green">#DCFDDC</color>
+    <color name="light_yellow">#F5E1C0</color>
+    <color name="translucent_yellow">#66F5E1C0</color>
+    <color name="edit_mode">#BF000000</color>
+    <color name="canvas">#ECEFF1</color>
+    <color name="text_light">#99000000</color>
+    <color name="template_view_item">#DCFDDC</color>
+    <color name="bottom_container">#757575</color>
+    <color name="key_type_2">#999999</color>
+    <color name="class_pressed">#EEEEEE</color>
+    <color name="red">#FF0000</color>
+
+    <color name="role_driver">#272727</color>
+    <color name="role_surveyor">#676767</color>
+    <color name="role_specialist">#f7a915</color>
+    <color name="role_admin">#F70577</color>
+    <color name="role_team_lead">#F21400</color>
+    <color name="role_manager">#00af3a</color>
+    <color name="role_search">#0070F0</color>
+
+    <color name="searchDialogResultColor">#123456</color>
+    <color name="searchDialogResultHighlightColor">#FFED2E47</color>
+</resources>

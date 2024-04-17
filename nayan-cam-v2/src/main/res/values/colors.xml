@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="translucent_yellow">#CCfdbc40</color>
+    <color name="translucent_green">#CC7CB340</color>
+    <color name="translucent_blue">#CC03A9F4</color>
+    <color name="translucent_red">#CCD94338</color>
+    <color name="colorPrimary">#DF4C41</color>
+    <color name="transparent">#79575757</color>
+    <color name="disclosure_color">#F37047</color>
+    <color name="grey_color">#939393</color>
+    <color name="blue_color">#0070F0</color>
+    <color name="dashboard">#F0F0F0</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey_shade1">#6D6D6D</color>
+    <color name="colorGreyValue">#d5d5d5</color>
+    <color name="colorButtonTint">#0070F0</color>
+    <color name="red">#ff0000</color>
+    <color name="black_transparent">#CC000000</color>
+</resources>

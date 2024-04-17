@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dashboard"
+    tools:context="co.nayan.c3specialist_v2.wallet.invoice.InvoiceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/actionBar"
+            layout="@layout/_toolbar" />
+
+        <ScrollView
+            android:id="@+id/svReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/llReceipt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:textColor="#C8000000"
+                    android:textSize="12sp"
+                    tools:text="Date: 2021-05030" />
+
+                <LinearLayout
+                    android:id="@+id/nayan_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/companyNameTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="NAYAN INDIA" />
+
+                    <TextView
+                        android:id="@+id/companyAddressTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#80000000"
+                        android:textSize="@dimen/smallestTextSize"
+                        tools:text="Ground Floor, L-3\nSouth Extension-II\nNew Delhi, South Delhi\nDelhi - 110049" />
+
+                    <TextView
+                        android:id="@+id/companyGstTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:textColor="#C8000000"
+                        android:textSize="@dimen/smallestTextSize"
+                        android:textStyle="italic"
+                        tools:text="(GST Number: 07ATRPR5202R1ZV)" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/user_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:text="@string/user_details"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/userNameTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:textColor="#80000000"
+                        android:textSize="@dimen/smallestTextSize" />
+
+                    <TextView
+                        android:id="@+id/addressTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:textColor="#80000000"
+                        android:textSize="@dimen/smallestTextSize" />
+
+
+                    <TextView
+                        android:id="@+id/phoneTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:textColor="#80000000"
+                        android:textSize="@dimen/smallestTextSize" />
+
+                    <TextView
+                        android:id="@+id/panTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:textColor="#C8000000"
+                        android:textSize="@dimen/smallestTextSize"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/payout_amount"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/payoutAmountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/payout_fee"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/payoutFeeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/payoutTdsHintTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/tds_hint_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/noteTextSize" />
+
+                <FrameLayout
+                    android:id="@+id/frame2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/payout_tds_20"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/payoutTdsTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/frame5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/referral_amount"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/referralAmountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/frame7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/referral_fee"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/referralFeeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/referralTdsHintTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/tds_hint_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/noteTextSize"
+                    android:visibility="visible" />
+
+                <FrameLayout
+                    android:id="@+id/frame6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/referral_tds_20"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/referralTdsTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/there_is_5_tds_deduction_on_referral_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/noteTextSize"
+                    android:visibility="visible" />
+
+                <FrameLayout
+                    android:id="@+id/frame11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/total_amount"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/totalAmountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/total_fee"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/totalFeeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/total_tds"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/totalTdsTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+
+                <View
+                    android:id="@+id/receipt_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#000000" />
+
+                <FrameLayout
+                    android:id="@+id/frame4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/margin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/final_amount"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/finalAmountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="#C2000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_10"
+                    android:text="@string/deductionNote"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/noteTextSize" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSave"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/save"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_save" />
+</RelativeLayout>

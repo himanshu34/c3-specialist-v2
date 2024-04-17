@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="position" type="id" />
+    <item name="template" type="id" />
+    <item name="record" type="id" />
+    <item name="videoAnnotationViewTag" type="id" />
+</resources>

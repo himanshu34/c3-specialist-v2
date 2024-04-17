@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_went_wrong">Oops! something went wrong. Please try again later.</string>
+    <string name="no_internet_message">Network connection unavailable. Check your internet connection and try again.</string>
+    <string name="socket_timeout_connection">We\'re sorry, but it seems like there was a problem connecting to the server. This could be due to a poor internet connection or server issues.</string>
+    <string name="permission_error">You need to accept location permissions to use this app</string>
+    <string name="offline_location_error">Your device is currently in offline mode, Location unavailable.</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="alert">Alert!</string>
+    <string name="ok">OK</string>
+    <string name="no_gps_provider">No GPS provider found for this device</string>
+</resources>

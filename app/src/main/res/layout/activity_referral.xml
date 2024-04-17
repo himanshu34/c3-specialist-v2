@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".referral.ReferralActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/appToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/dashboard"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/text_dark" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_parent_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivReferral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_referral"
+        app:layout_constraintBottom_toTopOf="@id/tv_refer_friends"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appToolbar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_refer_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_bold"
+        android:gravity="center"
+        android:text="@string/refer_header"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_ref_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivReferral" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_ref_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/left_round_corners"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/margin_30"
+        android:paddingVertical="@dimen/margin_8"
+        android:textColor="@color/ref_red"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_parent_horizontal"
+        app:layout_constraintEnd_toStartOf="@id/tv_copy_code"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_refer_friends" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_copy_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/right_rounded_corner"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/margin_30"
+        android:paddingVertical="@dimen/margin_8"
+        android:text="@string/copy"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_parent_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_ref_code"
+        app:layout_constraintTop_toBottomOf="@id/tv_refer_friends" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_ref_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/refer_info"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_parent_horizontal"
+        app:layout_constraintWidth_max="@dimen/margin_250" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/inviteContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_50"
+        app:cardBackgroundColor="@color/action_item"
+        app:cardCornerRadius="@dimen/margin_20"
+        app:cardElevation="@dimen/margin_3"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ref_info">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/inviteTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="@dimen/margin_12"
+            android:text="@string/refer_invite"
+            android:textColor="@color/text_dark"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

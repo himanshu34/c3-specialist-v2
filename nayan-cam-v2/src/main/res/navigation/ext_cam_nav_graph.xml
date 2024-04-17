@@ -1,0 +1,24 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashcam_nav"
+    app:startDestination="@id/scanningFragment">
+
+    <fragment
+        android:id="@+id/scanningFragment"
+        android:name="com.nayan.nayancamv2.extcam.dashcam.DashcamScanningFragment"
+        android:label="DashcamScanningFragment"
+        tools:layout="@layout/layout_dashcam_scan" >
+        <action
+            android:id="@+id/action_scanningFragment_to_droneConnectionFragment"
+            app:destination="@id/droneConnectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/droneConnectionFragment"
+        android:name="com.nayan.nayancamv2.extcam.drone.DroneConnectionFragment"
+        android:label="Drone Connection Fragment"
+        tools:layout="@layout/layout_drone_connection">
+    </fragment>
+    <!-- Define more actions here as needed -->
+</navigation>

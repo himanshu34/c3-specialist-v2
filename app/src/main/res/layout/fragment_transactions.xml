@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#11000000"
+        tools:context="wallet.transactions.TransactionsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/topContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/walletSelector"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/driverWallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:elevation="4dp"
+                        android:text="@string/driver"
+                        android:textColor="@color/text_role_selector"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:checkedIconVisible="false"
+                        app:chipBackgroundColor="@color/bg_role_selector"
+                        app:textEndPadding="8dp"
+                        app:textStartPadding="8dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/specialistWallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:elevation="4dp"
+                        android:text="@string/specialist"
+                        android:textColor="@color/text_role_selector"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:checkedIconVisible="false"
+                        app:chipBackgroundColor="@color/bg_role_selector"
+                        app:textEndPadding="8dp"
+                        app:textStartPadding="8dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/managerWallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:elevation="4dp"
+                        android:text="@string/manager"
+                        android:textColor="@color/text_role_selector"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:checkedIconVisible="false"
+                        app:chipBackgroundColor="@color/bg_role_selector"
+                        app:textEndPadding="8dp"
+                        app:textStartPadding="8dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/leaderWallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:elevation="4dp"
+                        android:text="@string/leader"
+                        android:textColor="@color/text_role_selector"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:checkedIconVisible="false"
+                        app:chipBackgroundColor="@color/bg_role_selector"
+                        app:textEndPadding="8dp"
+                        app:textStartPadding="8dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/bonus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:elevation="4dp"
+                        android:text="@string/bonus"
+                        android:textColor="@color/text_role_selector"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:checkedIconVisible="false"
+                        app:chipBackgroundColor="@color/bg_role_selector"
+                        app:textEndPadding="8dp"
+                        app:textStartPadding="8dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/referral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:elevation="4dp"
+                        android:text="@string/referral"
+                        android:textColor="@color/text_role_selector"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:checkedIconVisible="false"
+                        app:chipBackgroundColor="@color/bg_role_selector"
+                        app:textEndPadding="8dp"
+                        app:textStartPadding="8dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/referral_network"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:elevation="4dp"
+                        android:text="@string/referral_network"
+                        android:textColor="@color/text_role_selector"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:checkedIconVisible="false"
+                        app:chipBackgroundColor="@color/bg_role_selector"
+                        app:textEndPadding="8dp"
+                        app:textStartPadding="8dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/filterChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:elevation="4dp"
+                    android:text="@string/filters"
+                    android:textColor="@color/text_role_selector"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/bg_role_selector"
+                    app:chipIcon="@drawable/ic_drop_down"
+                    app:chipIconTint="@color/text_dark"
+                    app:textEndPadding="8dp"
+                    app:textStartPadding="4dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topContainer">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerViewContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:duration="800"
+                    tools:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/place_holder_transactions" />
+
+                        <include layout="@layout/place_holder_transactions" />
+
+                        <include layout="@layout/place_holder_transactions" />
+
+                        <include layout="@layout/place_holder_transactions" />
+
+                        <include layout="@layout/place_holder_transactions" />
+
+                        <include layout="@layout/place_holder_transactions" />
+
+                        <include layout="@layout/place_holder_transactions" />
+
+                        <include layout="@layout/place_holder_transactions" />
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/transactionsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/layout_transactions_item"
+                    tools:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/referralNetworkView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/ref_list_level_item"
+                    tools:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/noTransactionContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/margin_20"
+                    android:drawablePadding="@dimen/margin_15"
+                    android:text="@string/no_transaction_found"
+                    android:textColor="@color/text_dark"
+                    app:drawableTopCompat="@drawable/ic_not_found" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

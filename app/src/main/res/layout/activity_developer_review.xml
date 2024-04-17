@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#11000000"
+    tools:context="co.nayan.c3specialist_v2.developerreview.DeveloperReviewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/actionBar"
+            layout="@layout/_toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="16dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/questionTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/rubik_bold"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:text="34/65" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/selectedRecordsCountTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="34/65" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/gridSelectorIv"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/bg_grid_selector" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/hideOverlayIv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_invisible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/contrastIv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_contrast" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recordsView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/list_sandbox_record"
+                tools:spanCount="2"
+                tools:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/noRecordsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/errorTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_not_found"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/no_more_records"
+                    android:textColor="@color/text_dark" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/contrastSlider"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                android:background="@drawable/bg_cont_slider"
+                android:max="99"
+                android:paddingStart="20dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="12dp"
+                android:progress="50"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/judgmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:elevation="24dp"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/resetBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dev_reset_btn"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:text="@string/reject"
+            android:textAllCaps="true"
+            android:textColor="@color/dev_btn_text_selector"
+            android:textSize="16sp"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/approveBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dev_approve_btn"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:text="@string/approve"
+            android:textAllCaps="true"
+            android:textColor="@color/dev_btn_text_selector"
+            android:textSize="16sp"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/approveAllBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dev_approve_btn"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:text="@string/approve_all"
+            android:textAllCaps="true"
+            android:textColor="@color/dev_btn_text_selector"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>
+

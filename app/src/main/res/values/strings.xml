@@ -1,0 +1,472 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="channel_name">Nayan</string>
+    <string name="channel_description">Nayan</string>
+    <string name="logout">Log Out</string>
+    <string name="c3_specialist">C3-Specialist</string>
+    <string name="facebook_app_id" translatable="false">1144232629541807</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1144232629541807</string>
+    <string name="facebook_client_token" translatable="false">41d6f64b59a8f108706c257252a04d76</string>
+    <string name="home">Home</string>
+    <string name="wallet">Wallet</string>
+    <string name="profile">Profile</string>
+    <string name="specialist">Specialist</string>
+    <string name="manager">Manager</string>
+    <string name="developer">Developer</string>
+    <string name="admin">Admin</string>
+    <string name="driver">Driver</string>
+    <string name="my_account">My Account</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="kyc">KYC</string>
+    <string name="my_language">My Language</string>
+    <string name="start_work">Start Work</string>
+    <string name="find_help">Find Help</string>
+    <string name="scroll_down">Scroll Down</string>
+    <string name="ai">AI</string>
+    <string name="tap">Tap</string>
+    <string name="vol">Vol</string>
+    <string name="ndv">NDV</string>
+    <string name="work_summary">Work Summary</string>
+    <string name="driver_setting">Driver Settings</string>
+    <string name="my_performance">My Performance</string>
+    <string name="home_screen_message">Hi! %s\nLet\'s start earning!</string>
+    <string name="driver_home_screen_message">Hi! %s\nLet\'s start driving!</string>
+    <string name="delp_home_screen_message">Hi! %s\nLet\'s start capturing!</string>
+    <string name="home_screen_message_developer">Hi! %s\nCheck your action items!</string>
+    <string name="total_hours_worked">Total hours worked</string>
+    <string name="today_s_stats">Today\'s Stats</string>
+    <string name="english">English</string>
+    <string name="bank_account_info">Bank Account Info</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="more_sources">More Sources</string>
+    <string name="gender">Gender</string>
+    <string name="address">Address</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="your_name">Your name</string>
+    <string name="your_email">Your email</string>
+    <string name="your_address">Your address</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="your_state">Your state</string>
+    <string name="your_country">Your country</string>
+    <string name="your_gender">Your gender</string>
+    <string name="full_name">Full name</string>
+    <string name="add_address">Add Address</string>
+    <string name="selectState">Select State</string>
+    <string name="selectCountry">Select Country</string>
+    <string name="name_cant_be_blank">Name can\'t be blank.</string>
+    <string name="address_cant_be_blank">Address can\'t be blank.</string>
+    <string name="city_cant_be_blank">City can\'t be blank.</string>
+    <string name="state_cant_be_blank">Select state first.</string>
+    <string name="country_cant_be_blank">Country state first.</string>
+    <string name="beneficiary_name">Beneficiary Name</string>
+    <string name="beneficiary_account_number">Beneficiary Account Number</string>
+    <string name="bank_ifsc_code">Bank IFSC Code</string>
+    <string name="bank_information">Bank Information</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="branch">Branch</string>
+    <string name="city">City</string>
+    <string name="invalid_ifsc_code">Invalid IFSC code.</string>
+    <string name="beneficiary_name_cant_be_blank">Beneficiary name can\'t be blank</string>
+    <string name="beneficiary_account_number_cant_be_blank">Beneficiary account number can\'t be blank</string>
+    <string name="select_language">Select Language</string>
+    <string name="hindi">हिन्दी</string>
+    <string name="kyc_status">KYC Status</string>
+    <string name="add_pan_details">Add PAN details</string>
+    <string name="pan_text">PAN: %s</string>
+    <string name="add_photo_id_details">Add your Photo ID</string>
+    <string name="select_photo_id">Select Photo ID</string>
+    <string name="photo_id_text">ID Number: %s</string>
+    <string name="pan_number">PAN Number</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="upload_pan_image_here">Upload PAN image here</string>
+    <string name="pan_image">PAN Image</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="permission_denied">%s permission is denied</string>
+    <string name="permission_denied_permanently">Permission is denied permanently.You can grant them in App Settings.</string>
+    <string name="pan_details">PAN Details</string>
+    <string name="error_occured">Error occurred! %s</string>
+    <string name="alert">Alert!</string>
+    <string name="go_to_settings">Goto Settings</string>
+    <string name="pan_number_cant_be_blank">PAN number can\'t be blank.</string>
+    <string name="invalid_pan_number">Invalid PAN number.</string>
+    <string name="update_photoid_image_first">Update %s image first.</string>
+    <string name="update_pan_image_first">Update PAN image first.</string>
+    <string name="id_number">ID Number</string>
+    <string name="upload_photo_id_here">Upload Photo ID here</string>
+    <string name="photo_id_details">Photo ID details</string>
+    <string name="id_type_cant_be_blank">ID Type can\'t be blank.</string>
+    <string name="id_number_cant_be_blank">ID number can\'t be blank.</string>
+    <string name="update_id_image_first">Update Photo ID image first.</string>
+    <string name="transactions">Transactions</string>
+    <string name="default_money">₹ 0</string>
+    <string name="amount_earned">Amount Earned</string>
+    <string name="recorded_videos">Videos Uploaded</string>
+    <string name="default_points_earned">0.00 Points Earned</string>
+    <string name="checkout">Checkout</string>
+    <string name="bonus">Bonus</string>
+    <string name="filters">Filters</string>
+    <string name="transaction_points">%s Points</string>
+    <string name="last_updated_on">Last updated %s</string>
+    <string name="no_transaction_found">No Transaction Found</string>
+    <string name="no_referral_found">No Referral Found</string>
+    <string name="checkout_status">Checkout Status</string>
+    <string name="date">Date</string>
+    <string name="potential_points">Potential Points</string>
+    <string name="approved_potential_points">Approved Potential Points</string>
+    <string name="earned_points">Earned Points</string>
+    <string name="penalty_points">Penalty Points</string>
+    <string name="no_errors_to_show">No errors to show</string>
+    <string name="clear">Clear</string>
+    <string name="status">Status</string>
+    <string name="created">Created</string>
+    <string name="initiated">Initiated</string>
+    <string name="processed">Processed</string>
+    <string name="failed">Failed</string>
+    <string name="apply">Apply</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="incorrect_password_message">Password can\'t be blank.</string>
+    <string name="authenticate_to_edit_bank_details">Authenticate to edit Bank Details</string>
+    <string name="update_message">%s is updated successfully.</string>
+    <string name="not_uploaded">Not Uploaded</string>
+    <string name="rejected">Rejected</string>
+    <string name="pending_verification">Pending Verification</string>
+    <string name="verified">Verified</string>
+    <string name="no_pending_work">No pending work.</string>
+    <string name="unauthorized_error_message">You need to sign in or sign up before continuing.</string>
+    <string name="stats">Stats</string>
+    <string name="annotation_count">Annotated Records</string>
+    <string name="judgment_count">Validated Records</string>
+    <string name="specialist_wallet">Specialist Wallet</string>
+    <string name="manager_wallet">Manager Wallet</string>
+    <string name="other_wallets">Other Wallets</string>
+    <string name="view_wallets">View Wallets</string>
+    <string name="hide_wallets">Hide Wallets</string>
+    <string name="potential_earning">Potential Earning</string>
+    <string name="total">Total</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="correct">Correct</string>
+    <string name="completed">Completed</string>
+    <string name="today">Today</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="total_annotated_records">Total Annotated\nRecords</string>
+    <string name="total_judgments_records">Total Validated\nRecords</string>
+    <string name="review_time">Reviewed Time</string>
+    <string name="reviewed_records">Reviewed Records</string>
+    <string name="detected_objects">Objects Detected</string>
+    <string name="approved_records">Approved\nRecords</string>
+    <string name="rejected_records">Rejected\nRecords</string>
+    <string name="annotated_records">Annotated\nRecords</string>
+    <string name="validated_records">Validated\nRecords</string>
+    <string name="page_not_found">Page Not Found</string>
+    <string name="review_work">Review Work</string>
+    <string name="my_workflows">My Workflows</string>
+    <string name="you_are_not_the_owner_of_any_work_flow">You are not the owner of any work flow…</string>
+    <string name="restricted">Restricted</string>
+    <string name="user_details">Subscriber Details</string>
+    <string name="payout_amount">Cashout Amount</string>
+    <string name="payout_fee">Cashout Fee</string>
+    <string name="payout_tds_20">Cashout TDS</string>
+    <string name="referral_amount">Referral Amount</string>
+    <string name="referral_fee">Referral Fee</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="referral_tds_20">Referral TDS(20%)</string>
+    <string name="total_fee">Total Fee</string>
+    <string name="total_tds">Total TDS</string>
+    <string name="final_amount">Final Amount</string>
+    <string name="deductionNote">*Kindly include your PAN number above for TDS calculation</string>
+    <string name="tds_hint_text">*You have violations: 0 out of 0 required.</string>
+    <string name="referral_tds_hint_text">*There is 20% TDS deduction on Referral amount because PAN number was not attached to your C3 account at the time of transaction</string>
+    <string name="payout_receipt">Payout Receipt</string>
+    <string name="bonus_amount">Bonus Amount</string>
+    <string name="penalty_amount">Penalty Amount</string>
+    <string name="file_has_been_downloaded_successfully">File has been downloaded successfully.</string>
+    <string name="no_workflow_step_is_present">No Workflow Step is present…</string>
+    <string name="please_wait_fetching_records">Please wait, fetching records.</string>
+    <string name="no_more_records">There are no more records to process.</string>
+    <string name="points">Points</string>
+    <string name="potential">Potential</string>
+    <string name="completed_potential">Completed Potential</string>
+    <string name="incorrect_judgments">Incorrect Judgments</string>
+    <string name="incorrect_annotations">Incorrect Annotations</string>
+    <string name="your_annotation">Your Annotation</string>
+    <string name="correct_judgement">Correct Annotation</string>
+    <string name="incorrect_annotation">Incorrect Annotation</string>
+    <string name="record_id">Record ID: %d</string>
+    <string name="correct_answer">Correct Answer</string>
+    <string name="your_answer">Your Answer</string>
+    <string name="correct_judgment">Correct Judgment</string>
+    <string name="your_judgment">Your Judgment</string>
+    <string name="incorrect_judgment">Incorrect Judgment</string>
+    <string name="question">Question</string>
+    <string name="incorrect_record_id">Record ID</string>
+    <string name="threshold_vote">Threshold Votes %d</string>
+    <string name="required_vote">Required Votes %d</string>
+    <string name="search">Search</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="check_out_limit_text">Checkout limit: ₹ %.2f</string>
+    <string name="amount_text">₹ %.2f</string>
+    <string name="points_earned_text">%.2f Points Earned</string>
+    <string name="data_records">Data Records</string>
+    <string name="aasm_state">State</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="invalid_date">Selected date is invalid.</string>
+    <string name="new_update_available">New Update Available</string>
+    <string name="app_update_message">Please, update app to new version(%d) to continue working.</string>
+    <string name="not_allowed_on_this_location">Not allowed at your current location</string>
+    <string name="annotation_value">Annotation Value</string>
+    <string name="next">Next</string>
+    <string name="get_started">Start Working</string>
+    <string name="skip">Skip</string>
+    <string name="verification">Verification</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="phone_verification_message_1">We will send you One Time OTP \non your phone number</string>
+    <string name="phone_verification_message_2">Please type the verification code sent to %s</string>
+    <string name="did_t_receive_the_verification_code">Did\'t receive the verification code?</string>
+    <string name="resend_again">Resend again</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="invalid_otp">Invalid OTP.</string>
+    <string name="invalid_phone_number">Invalid phone number.</string>
+    <string name="invalid_isd">Invalid ISD code.</string>
+    <string name="to">-</string>
+    <string name="fetching_stats">Please wait, Fetching Stats…</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="referral">Referral</string>
+    <string name="tnc">Terms and Policies</string>
+    <string name="settings">Settings</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password_not_same">New password and confirm password are not same.</string>
+    <string name="incorrect_currnet_password">Incorrect current password.</string>
+    <string name="current_password_cant_be_blank">Current password can\'t be blank.</string>
+    <string name="new_password_cant_be_blank">New password can\'t be blank.</string>
+    <string name="notification_channel_id">default</string>
+    <string name="please_refresh_the_page_and_try_again">Please refresh the page and try again.</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="users">Users</string>
+    <string name="invite">Invite</string>
+    <string name="sending_invite">Sending invite, Please wait…</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="stop_sharing">Stop Sharing</string>
+    <string name="reconnect">Reconnect?</string>
+    <string name="start_meeting">Start Meeting</string>
+    <string name="start_recording">Start Recording</string>
+    <string name="internal_memory">Internal Memory</string>
+    <string name="offline_videos">Offline Videos : %s</string>
+    <string name="hourly_videos">Hourly video count : %s</string>
+    <string name="daily_videos">Daily video count : %s</string>
+    <string name="offline_video">Offline Videos</string>
+    <string name="link_twitter_with_nayan">LINK TWITTER WITH NAYAN</string>
+    <string name="video_upload">Video Upload</string>
+    <string name="wifi_only">Wifi Only</string>
+    <string name="wifi_mobile_data">Wifi + Mobile Data</string>
+    <string name="night_mode_tap_to_update_time">Night Mode(Tap to update time)</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="available_total_storage_head">Available/Total Storage :</string>
+    <string name="allocated_storage_head">Allocated Storage :</string>
+    <string name="offline_videos_head">Offline Videos :</string>
+    <string name="select_time">Select Time</string>
+    <string name="sms_retriever_timeout">Please type OTP manually.</string>
+    <string name="sms_retriever_error">Error occurred while reading OTP.</string>
+    <string name="inconclusive_records">Inconclusive\nRecords</string>
+    <string name="inconclusive_count">Inconclusive Records</string>
+    <string name="incorrect_reviews">Incorrect Reviews</string>
+    <string name="inconclusive">Inconclusive</string>
+    <string name="reviewed_count">Reviewed\nRecords</string>
+    <string name="your_review">Your Review</string>
+    <string name="correct_review">Correct Review</string>
+    <string name="downloading_failed">Downloading failed, please try again!</string>
+    <string name="downloading_ai_engine">Setting up AI Engine</string>
+    <string name="total_records_count">Total records: %d</string>
+    <string name="requesting_work">Work Request</string>
+    <string name="please_wait_fetching_work">Please wait, creating work …</string>
+    <string name="roles_updated">Roles Update Alert!</string>
+    <string name="no_role_warning">Don\'t have access to any role, please contact the Admin.</string>
+    <string name="dont_have_specialist_access">You don\'t have Specialist access.</string>
+    <string name="dont_have_manager_access">You don\'t have Manager access.</string>
+    <string name="dont_have_admin_access">You don\'t have Admin access.</string>
+    <string name="zero_percent">0%</string>
+    <string name="downloading_time_txt">0/0 MB</string>
+    <string name="ai_engine_setup_failed">Failed to set up AI engine</string>
+    <string name="last_updated_at">Last updated: %s</string>
+    <string name="last_location_updated_at">Last location sync: %s</string>
+    <string name="last_segments_updated_at">Last segments sync: %s</string>
+    <string name="local_connection_message">You are connected, waiting for %s</string>
+    <string name="offline_video_upload_message">You have %s videos waiting to be uploaded</string>
+    <string name="default_hover_mode">Default Hover Mode</string>
+    <string name="role_request">Don\'t have access to any role, please request</string>
+    <string name="learning_videos">Learning Videos</string>
+    <string name="video_gallery">Video Gallery</string>
+    <string name="no_video_is_present">No Video is present.</string>
+    <string name="no_learning_video_is_present">No Learning Video is present.</string>
+    <string name="please_wait_assigning_work">Please wait… assigning work</string>
+    <string name="location_not_supported">Unsupported Location</string>
+    <string name="send_request">Send Request</string>
+    <string name="your_request_has_been_submitted">Your request has been submitted to join the Nayan network, Our manager will contact you at your phone no. and Email.</string>
+    <string name="please_select_role">Please select at least one role</string>
+    <string name="data_usage_limit_day">Data Usage Limit/Day</string>
+    <string name="data_limit">Data Limit: </string>
+    <string name="current_data_usage">Current Data Usage: </string>
+    <string name="location_disabled">Location Disabled</string>
+    <string name="turn_on_your_location">Please turn your location ON</string>
+    <string name="driver_wallet">Driver Wallet</string>
+    <string name="start">Start</string>
+    <string name="lets_start">Let\'s Start</string>
+    <string name="potential_earning_message">Finishing the assignment accurately, will get you %s points per record.</string>
+    <string name="delhi_police">Delhi Police</string>
+    <string name="start_camera">Start Camera</string>
+    <string name="welcome_to_nayan">Welcome to Nayan !</string>
+    <string name="please_click_on_start_camera_to_start_capturing">Please click on start camera to start capturing</string>
+    <string name="potential_alert_title">Hey!</string>
+    <string name="police_home_screen_message">Hi! %s\nLet\'s start capturing!</string>
+    <string name="my_team">My Team</string>
+    <string name="request_member">Request Member</string>
+    <string name="team_performance">Team Performance</string>
+    <string name="dont_have_leader_access">You don\'t have Leader access.</string>
+    <string name="leader">Leader</string>
+    <string name="no_team_member_present">No Team Member Present!</string>
+    <string name="new_member">New member</string>
+    <string name="request_sent_successfully">Request sent successfully.</string>
+    <string name="request">Request</string>
+    <string name="phone_cant_be_blank">Phone number can\'t be blank!</string>
+    <string name="view_all">View All</string>
+    <string name="members">Members</string>
+    <string name="pending">Pending</string>
+    <string name="app_updated_successfully">App updated successfully.</string>
+    <string name="today_s_stats_of_your_team">Today\'s Stats of your team</string>
+    <string name="your_stats_for_today">Your stats for today</string>
+    <string name="incorrect_points">Incorrect Potentials</string>
+    <string name="correct_potentials">Correct Potentials</string>
+    <string name="annotation_potential">Annotation Potential</string>
+    <string name="judgment_potential">Judgment Potential</string>
+    <string name="record_cant_be_null">Record can\'t be null!</string>
+    <string name="record_id_cant_be_null">Record can\'t be null!</string>
+    <string name="wf_step">Wf Step</string>
+    <string name="select_workflow_step">Select Workflow Step</string>
+    <string name="specialist_judgments">Specialist Judgments</string>
+    <string name="manager_judgments">Manager Judgments</string>
+    <string name="manager_reviews">Manager Reviews</string>
+    <string name="developer_reviews">Developer Reviews</string>
+    <string name="annotation_question">Annotation Question</string>
+    <string name="judgment_question">Judgment Question</string>
+    <string name="leader_wallet">Leader Wallet</string>
+    <string name="volume">Volume control</string>
+    <string name="current_volume">Current volume: %s</string>
+    <string name="empty_receipt_link">Receipt link can\'t be empty…</string>
+    <string name="pdf_reader_warning">Can\'t open this file. install a PDF reader first…</string>
+    <string name="there_is_5_tds_deduction_on_referral_amount">*There is 5% TDS deduction on Referral amount.</string>
+    <string name="download_invoice_message">Please wait, downloading receipt...</string>
+    <string name="file_downloaded">File downloaded successfully</string>
+    <string name="file_cant_be_downloaded">File couldn\'t be downloaded</string>
+    <string name="beneficiary_name_update_error">As soon as you change your beneficiary name, it will also update your profile name</string>
+    <string name="find_your_next_work">Find your next work</string>
+    <string name="default_ai_mode">AI Mode</string>
+    <string name="default_cr_mode">CR Mode</string>
+    <string name="enter_cr_token">Please enter your CR token.</string>
+    <string name="hint_cr_token">CR token</string>
+    <string name="start_cr">Start CR</string>
+    <string name="invalid_cr">Invalid CR token.</string>
+    <string name="filter">Filter</string>
+    <string name="faq_confirmation_message">I understand</string>
+    <string name="faq_sets">FAQ</string>
+    <string name="there_is_no_training_data">There is no training data!</string>
+    <string name="min_payout_message">Min checkout points should be greater than %d</string>
+    <string name="i_understand">I Understand</string>
+    <string name="fetching_location">Fetching Location</string>
+    <string name="active_records"> %d \nActive Records</string>
+    <string name="road_violations">Road Violations</string>
+    <string name="please_wait_hover_mode_running">Hover video recorder is running in background, please wait till it stops in order to upload videos.</string>
+    <string name="low_battery_warning">Battery is low, please put your phone on charge before you start uploading videos</string>
+    <string name="refresh_route">Refresh Route</string>
+    <string name="recenter">Re-center</string>
+    <string name="refer_header">Refer Your Friends, Earn Cashback</string>
+    <string name="refer_info">Invite your friends to join NAYAN and earn 10% of their income for each friend who joins using your referral code.</string>
+    <string name="refer_invite">Invite Now</string>
+    <string name="i_have_referral_code">I have a referral code</string>
+    <string name="referral_code_verified">Referral Code Verified</string>
+    <string name="invalid_referral_code">Please enter a valid referral code</string>
+    <string name="referral_code_verified_successfully">Referral Code Verified Successfully</string>
+    <string name="referral_wallet">Referral Wallet</string>
+    <string name="level_text">Level </string>
+    <string name="referral_link" formatted="false" translatable="false">https://play.google.com/store/apps/details?id=%PACKAGE_NAME%&amp;referrer=utm_source=</string>
+    <string name="referral_text" formatted="false">"Hey! Earn money by reporting road violations on NAYAN. Join using my referral link %APP_LINK% and make our roads safer together!"</string>
+    <string name="copy">Copy</string>
+    <string name="referral_copied_successfully">Referral code copied successfully</string>
+    <string name="referral_network">Referral Network</string>
+    <string name="no_internet_message">Network connection unavailable. Check your internet connection and try again.</string>
+    <string name="surge_hours">Surge Hours</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="mandate_profile_photo">Please upload your profile photo before recording videos</string>
+    <string name="scan_wifi_denied">We need to scan the nearby dashcam wifi hotspots in order to connect</string>
+    <string name="video_started_uploading">Your Video has started uploading.</string>
+    <string name="temp_storage">VTS</string>
+
+
+    <string-array name="state_array">
+        <item>Andaman and Nicobar Islands</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujrat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Ladakh</item>
+        <item>Lakshadweep</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Puducherry</item>
+        <item>Punjab</item>
+        <item>Rajashthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
+
+    <string-array name="state_array_uae" tools:ignore="ExtraTranslation">
+        <item>Abu Dhabi</item>
+        <item>Ajman</item>
+        <item>Dubai</item>
+        <item>Fujairah</item>
+        <item>Ras Al Khaimah</item>
+        <item>Sharjah</item>
+        <item>Umm Al Quwain</item>
+    </string-array>
+
+    <string-array name="country_array" tools:ignore="ExtraTranslation">
+        <item>India</item>
+        <item>United Arab Emirates</item>
+    </string-array>
+</resources>

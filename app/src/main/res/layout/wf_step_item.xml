@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/checkoutContainerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_10"
+        app:cardElevation="@dimen/margin_2"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10">
+
+            <LinearLayout
+                android:id="@+id/topContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/wfStepName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/large_text_size"
+                    tools:text="P2_LP" />
+
+                <TextView
+                    android:id="@+id/applicationModeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/small_text_size"
+                    android:visibility="visible"
+                    tools:text="@string/restricted" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/middleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topContainer">
+
+                <TextView
+                    android:id="@+id/requiredVoteTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/smallestTextSize"
+                    tools:text="Threshold Vote 4" />
+
+                <TextView
+                    android:id="@+id/thresholdVoteTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/smallestTextSize"
+                    tools:text="Threshold Vote 4" />
+            </LinearLayout>
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/middleContainer">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/sandboxChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:elevation="@dimen/margin_5"
+                    android:text="@string/sandbox"
+                    android:textColor="@color/white"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    android:visibility="gone"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/colorPrimary"
+                    app:textEndPadding="@dimen/margin_10"
+                    app:textStartPadding="@dimen/margin_10"
+                    tools:visibility="visible" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/reviewRecordsChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:elevation="@dimen/margin_5"
+                    android:text="@string/review_records"
+                    android:textColor="@color/white"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/colorPrimary"
+                    app:textEndPadding="@dimen/margin_10"
+                    app:textStartPadding="@dimen/margin_10" />
+            </com.google.android.material.chip.ChipGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

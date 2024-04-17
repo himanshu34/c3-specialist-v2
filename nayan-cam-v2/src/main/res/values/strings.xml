@@ -1,0 +1,186 @@
+<resources>
+    <string name="camera_not_supported">This app is not supported on your device</string>
+    <string name="camera_not_accessible">Currently we\'re not able to access camera on this device</string>
+    <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+    <string name="recording_success">Recording Successful</string>
+    <string name="recording_started">Recording started!</string>
+    <string name="vertical_mode_started">Vertical mode started!</string>
+    <string name="cooldown_mode_started">Cool down  mode started!</string>
+    <string name="recording_successful">Recording successful</string>
+    <string name="recording_failed">Recording failed</string>
+    <string name="recording_corrupted">We found that camera captured a corrupted video</string>
+    <string name="launch_service">Launch Service</string>
+    <string name="camera_switch_error">Unable to switch the camera, recording is in progress</string>
+    <string name="rotate_left">Rotate Left</string>
+    <string name="rotate_right">Rotate Right</string>
+    <string name="notification_title">Camera has been stopped, please tap on restart to continue recording</string>
+    <string name="hover_service">Hover Service</string>
+    <string name="open_dashboard">Open Dashboard</string>
+    <string name="open_recorder">Open recorder</string>
+    <string name="camera_rationale">The camera permission is needed to use this feature.</string>
+    <string name="fine_location_permission_rationale">The fine location permission is needed for core functionality.</string>
+    <string name="fine_permission_denied_explanation">Fine location permission was denied, but is needed for core functionality.</string>
+    <string name="background_location_permission_rationale">The background location permission is needed for enhanced functionality.</string>
+    <string name="background_permission_denied_explanation">Background location permission was denied but needed for enhanced functionality.</string>
+    <string name="restart">Restart</string>
+    <string name="draw_over_other_app">Draw over other app permission not available. Closing the application</string>
+    <string name="draw_over_other_app_">Draw over other app permission not available.</string>
+    <string name="close">Close</string>
+    <string name="restarting_nayan_hover_service">Please wait. Restarting nayan hover service.</string>
+    <string name="please_enable_auto_rotate_hover_mode_only_works_in_landscape_mode">Please enable auto rotate, hover mode only works in landscape mode…</string>
+    <string name="upload_notification_channel_id">uploads</string>
+    <string name="process_notification">Processing</string>
+    <string name="uploaded_notification">Uploading Finished</string>
+    <string name="upload_notification_title">Uploading</string>
+    <string name="upload_notification_message">Please wait while we\'re starting your video upload service…</string>
+    <string name="upload_notification_failed_title">Uploading Failed</string>
+    <string name="upload_notification_data_limit_message">Data usage limit exceeded for the day</string>
+    <string name="upload_notification_netwrork_error">Unable to upload on the current network</string>
+    <string name="corrupted_file_found">Corrupted file found</string>
+    <string name="low_battery_warning">Battery is low, please put your phone on charge before you start uploading videos</string>
+    <string name="socket_timeout_exception">Socket timeout exception, we\'re unable to upload videos right now on our servers. Please try again after some time.</string>
+    <string name="upload_failed_message">Something went wrong, we\'re unable to upload videos right now on our servers. Please try again after some time.</string>
+    <string name="unable_to_connect_server">We\'re unable to connect our servers. Please try again after some time.</string>
+    <string name="unauthorized_error_message">You need to sign in or sign up before continuing.</string>
+    <string name="page_not_found">Page Not Found</string>
+    <string name="server_storage_full">Server storage limit reached, upload after sometime</string>
+    <string name="please_wait_starting_recorder">Please wait. Starting Nayan main recorder.</string>
+    <string name="please_wait_open_dashboard">Please wait. Opening dashboard.</string>
+    <string name="please_wait_opening_hover_mode">Please wait opening hover mode.</string>
+    <string name="please_wait_opening_portrait_hover_mode">Please wait opening portrait hover mode.</string>
+    <string name="cancel_upload">Cancel</string>
+    <string name="okay_upload">Okay</string>
+    <string name="upload_notification_channel_name">Uploads</string>
+    <string name="upload_notification_channel_desc">File upload progress notifications</string>
+    <string name="upload">Upload</string>
+    <string name="uploading">Uploading</string>
+    <string name="tilt_warning">Recording is not allowed.Please tilt your device to continue recording.</string>
+    <string name="uploaded_all_videos">Uploaded all videos</string>
+    <string name="downloading_ai_models">Downloading AI Models</string>
+    <string name="downloading_ai_engine">Setting up AI Engine</string>
+    <string name="retry">Retry</string>
+    <string name="memory_error">Not enough memory to record videos.</string>
+    <string name="file_name">File Name :</string>
+    <string name="upload_status">Upload Status :</string>
+    <string name="upload_timestamp">Upload timestamp :</string>
+    <string name="error">Error :</string>
+    <string name="no_logs_available">No Logs Available</string>
+    <string name="optimize_frames">Optimize Frames</string>
+    <string name="exit">Exit</string>
+    <string name="settings">Settings</string>
+    <string name="use_your_location">Use Your Location &amp; Camera</string>
+    <string name="need_location_permission">Allow Nayan to use location all of the time to Help the City Fight Problems</string>
+    <string name="no_thanks">No Thanks</string>
+    <string name="turn_on">Turn On</string>
+    <string name="camera_permision_denied_explaination">The camera permission is needed for this feature</string>
+    <string name="disclosure_text">Nayan will use background location permission while working in hover mode</string>
+    <string name="restart_service_notify">Camera is stopped due to some issue, please tap on restart</string>
+    <string name="data_limit_alert">Couldn\'t upload, please check the usage data limit</string>
+
+    <string name="current_temperature">Current temperature: %1$s°C, Your device is overheating.</string>
+    <string name="current_temperature_warning">"Device is heating up reducing the video FPS, Current temperature %1$s°C. Video recording will not be supported if device temperature is above %2$s°C.</string>
+    <string name="temperature_threshold">Temperature threshold reached, current temperature: %1$s°C, shutting down camera services</string>
+    <string name="consecutive_recording">You\'re not allowed to record consecutive videos</string>
+
+    <string name="temp_state_5" >Shutting down camera, T:%1$s</string>
+    <string name="temp_state_4" >Cool your device, T:%1$s</string>
+    <string name="temp_state_1" >T:%1$s</string>
+
+    <string name="event_recorded" >Event Recorded</string>
+    <string name="call_support">Call Support</string>
+    <string name="please_contact_support_team">Please contact our support team in order to rectify this issue</string>
+    <string name="ai_engine_setup_failed">Failed to setup AI engine</string>
+
+    <string name="error_memory">Unable to run AI, Not enough memory (%1$s), Please close other apps.</string>
+    <string name="fetching_location">Fetching Location</string>
+    <string name="video_threshold">WARNING:\n Threshold for allowed videos reached, we have disabled AI, please use manual trigger to record video.</string>
+
+    <string name="location_received">Location Received</string>
+    <string name="location_error">Unable to record video, Location unavailable.</string>
+    <string name="offline_location_error">Your device is currently in offline mode, Location unavailable.</string>
+    <string name="find_your_next_work">Find your next work</string>
+    <string name="grant_access">Grant access</string>
+    <string name="your_location">Your location</string>
+    <string name="background_location">Background location</string>
+    <string name="phone_camera">Your phone camera</string>
+    <string name="phone_storage">Your phone storage</string>
+    <string name="deny_access">Deny access</string>
+    <string name="allow_access">Allow access</string>
+
+    <string name="driver_lite_activated">Driver Lite mode activated.</string>
+    <string name="segments_sync_started">Syncing segments…</string>
+    <string name="segments_sync_assets">Please wait while we\'re syncing assets…</string>
+    <string name="database_sync_started">Database syncing…</string>
+    <string name="downloading_assets">Please wait while we\'re downloading assets…</string>
+    <string name="uploading_assets">Please wait while we\'re uploading assets…</string>
+    <string name="warning_driving_fast">WARNING: Drive slowly</string>
+    <string name="warning_black_line">WARNING: \nDrive on different road. Driving Restricted!</string>
+    <string name="driving_fast_text">Drive slowly (Max 40 kph allowed) since we\'re not able to capture videos above this speed.</string>
+    <string name="optical_motion_text">WARNING: \nMotionless content detected, \nplease stop recording if not driving.</string>
+    <string name="not_in_surge_text">WARNING: \nDrive in surge location in order to allow us recording videos.</string>
+    <string name="please_enable_location">Please enable Location!!</string>
+    <string name="hover_service_location_warning">Hover mode can not function properly without Location enabled.</string>
+    <string name="no_internet_message">Network connection unavailable. Check your internet connection and try again.</string>
+    <string name="click">Click</string>
+
+    <!--Drone-Dashcam Strings -->
+    <string name="drone">Drone</string>
+    <string name="dashcam">Dashcam</string>
+    <string name="dashcam_scanning">Searching for Dashcams…</string>
+    <string name="dashcam_subtext">It\'s going to take only a few seconds</string>
+    <string name="dashcam_instruction">Tap \"Connect\" when you get the prompt from your device</string>
+    <string name="drone_instructions">Connect Phone to Drone RC</string>
+    <string name ="start_recording">Start Recording</string>
+    <string name="registration_failed"> Registration Failed</string>
+    <string name="supported_products">Supported Products</string>
+    <string name="recording_dashcam">Dascham is Scanning</string>
+    <string name="recording_drone">Drone is Scanning</string>
+    <string name="dashcam_manual">Navigate to your device Settings > Wifi > Choose \'DDPAIXXXX\' > Connect (default password: 1234567890) </string>
+    <string name="drone_location_warning">WARNING: \n\nMove to an open area, in order for the drone to get a GPS fix.</string>
+
+    <string name="duplicate_file_error">Duplicate File</string>
+    <string name="upload_syncing_video_files">Please wait while we\'re verifying uploaded video files status on server</string>
+    <string name="folder_sync_started">Video folder syncing…</string>
+    <string name="permission_disclosure_text">The Nayan App utilizes your device\'s camera and location data to identify and report roadway grievances in the vicinity, even when the app is not actively in use.</string>
+
+    <string-array name="drone_names">
+        <item>* DJI Mini 2</item>
+        <item>* DJI Mini SE</item>
+        <item>* Mavic 2 Enterprise Advanced</item>
+        <item>* Mavic Air 2</item>
+        <item>* Mavic Mini</item>
+        <item>* Matrice 300 RTK</item>
+        <item>* DJI X-Port</item>
+        <item>* DJI SkyPort</item>
+        <item>* DJI SkyPort V2</item>
+        <item>* DJI Smart Controller</item>
+        <item>* Matrice 200 V2</item>
+        <item>* Matrice 210 V2</item>
+        <item>* Matrice 210 RTK V2</item>
+        <item>* Phantom 4 RTK</item>
+        <item>* Mavic 2 Enterprise, Mavic 2 Enterprise Dual</item>
+        <item>* Mavic 2 Pro</item>
+        <item>* Mavic 2 Zoom</item>
+        <item>* Spark</item>
+        <item>* Matrice 210</item>
+        <item>* Matrice 210RTK</item>
+        <item>* Matrice 200</item>
+        <item>* Inspire 2</item>
+        <item>* Mavic Pro</item>
+        <item>* Mavic Air</item>
+        <item>* Phantom 4, Phantom 4 Pro &amp; Phantom 4 Advanced, Phantom 4 Pro V2.0, P4 Multispectral</item>
+        <item>* Matrice 600 &amp; Matrice 600 Pro, RTK and Ronin MX</item>
+        <item>* Phantom 3 Standard, Advanced, 4K &amp; Professional</item>
+        <item>* Inspire 1, Inspire 1 Pro &amp; Inspire 1 RAW</item>
+        <item>* Matrice 100 with X3, X5 &amp; X5R</item>
+        <item>* Osmo, Osmo Pro, Osmo RAW &amp; Osmo+</item>
+        <item>* Osmo Mobile</item>
+        <item>* Osmo Mobile 2</item>
+        <item>* Lightbridge 2 with A2</item>
+        <item>* Lightbridge 2 with standalone A3 or N3</item>
+        <item>* Focus</item>
+        <item>* N1 Video Encoder</item>
+        <item>* Payload devices</item>
+        <item>* Cendence</item>
+    </string-array>
+</resources>
